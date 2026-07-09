@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  /* Gold / amber accent ramp */
+  --color-gold-50: #fbf8f1;
+  --color-gold-100: #f5ead5;
+  --color-gold-200: #e9d4a8;
+  --color-gold-300: #dcbc7c;
+  --color-gold-400: #cfa85d;
+  --color-gold-500: #c29a45;
+  --color-gold-600: #a17f35;
+  --color-gold-700: #7f642a;
+  --color-gold-800: #5e4a1f;
+  --color-gold-900: #3d3014;
+  --color-gold-950: #221b0b;
+
+  /* Warm near-black neutrals */
+  --color-ink-950: #0a0908;
+  --color-ink-900: #121110;
+  --color-ink-850: #171512;
+  --color-ink-800: #201d18;
+  --color-ink-700: #322d25;
+  --color-ink-600: #4a433a;
+
+  /* Warm off-white text */
+  --color-cream-50: #f7f4ee;
+  --color-cream-200: #e4ddcf;
+  --color-cream-400: #a79c89;
+
+  --font-display: var(--font-fraunces);
+  --font-body: var(--font-inter);
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--color-ink-950);
+  color: var(--color-cream-50);
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+::selection {
+  background: var(--color-gold-500);
+  color: var(--color-ink-950);
+}
