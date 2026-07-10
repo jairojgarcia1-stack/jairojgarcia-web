@@ -37,6 +37,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# original (uncompressed) media masters, kept locally only
+/.media-originals
+
 # claude code local settings
 .claude/settings.local.json
 .claude/scheduled_tasks.lock

@@ -1,10 +1,10 @@
 export const MEDIA = {
-  heroPortrait: "/media/hero-portrait.jpg",
-  aboutPortrait: "/media/about-portrait.jpg",
+  heroPortrait: "/media/hero-portrait.png",
+  aboutPortrait: "/media/about-portrait.png",
   speakingReel: "/media/speaking-reel.mp4",
   bookCovers: {
-    superhumanos: "/media/cover-superhumanos.jpg",
-    "sin-miedo-al-exito": "/media/cover-sin-miedo-al-exito.jpg",
+    superhumanos: "/media/cover-superhumanos.png",
+    "sin-miedo-al-exito": "/media/cover-sin-miedo-al-exito.jpeg",
   },
   testimonialPhotos: {
     t1: "/media/testimonial-1.jpg",
