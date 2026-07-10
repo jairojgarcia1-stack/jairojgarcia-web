@@ -5,7 +5,7 @@ import { personSchema } from "@/lib/seo/jsonld";
 
 export function RootHtml({ lang, children }: { lang: "es" | "en"; children: ReactNode }) {
   return (
-    <html lang={lang} className={`${fraunces.variable} ${inter.variable} h-full`}>
+    <html lang={lang} className={`${fraunces.variable} ${inter.variable} h-full scroll-smooth`}>
       <body className="flex min-h-full flex-col antialiased">
         <JsonLd data={personSchema()} />
         {children}

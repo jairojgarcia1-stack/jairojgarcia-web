@@ -54,10 +54,11 @@ export function HomePage({
         intro={home.booksIntro}
         books={books}
         basePath={staticRoutes.books[locale]}
+        moreInfoLabel={locale === "es" ? "Más información" : "More info"}
       />
-      <Ecosystem ecosystem={home.ecosystem} />
+      <Ecosystem ecosystem={home.ecosystem} locale={locale} />
       <SocialProof socialProof={home.socialProof} locale={locale} />
-      <Testimonials testimonials={home.testimonials} />
+      <Testimonials testimonials={home.testimonials} locale={locale} />
       <Contact contact={home.contact} id={locale === "es" ? "contacto" : "contact"} />
     </PageShell>
   );

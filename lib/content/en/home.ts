@@ -1,32 +1,34 @@
 import type { HomeContent } from "@/lib/content/types";
 import { CONTACT_EMAIL } from "@/lib/constants";
+import { bookSlugs, staticRoutes } from "@/lib/i18n/slug-map";
 
 export const home: HomeContent = {
   hero: {
     eyebrow: "Author · Speaker · Transformation Coach",
     headline: "You were made with purpose, not mass-produced.",
     subheadline:
-      "Jairo J. García helps leaders, entrepreneurs, and teams overcome the fear of success, activate their purpose, and build a life of real impact.",
+      "You're not reading this by accident. Something in you already knows there's a version of yourself —braver, clearer, freer— that you haven't decided to live yet. This is where finding it begins.",
     primaryCta: { label: "Explore my books", href: "/en/books" },
     secondaryCta: { label: "Book me for your event", href: "/en/speaking" },
   },
   stats: [
-    { id: "stat-events", value: "500+", label: "Talks and events" },
-    { id: "stat-countries", value: "15+", label: "Countries reached" },
-    { id: "stat-people", value: "100,000+", label: "People impacted" },
-    { id: "stat-books", value: "2", label: "Published books" },
+    { id: "stat-events", value: "500+", label: "Stages where transformation began" },
+    { id: "stat-countries", value: "15+", label: "Countries the message has crossed into" },
+    { id: "stat-people", value: "100,000+", label: "People who decided to transform their lives" },
+    { id: "stat-books", value: "2", label: "Books written to break the mold" },
   ],
   about: {
     heading: "About Jairo",
     paragraphs: [
-      "Jairo J. García is an author, international speaker, and coach specializing in leadership, purpose, identity, and personal transformation. Through his books, talks, and training programs, he helps people break through their limits, overcome the fear of success, and develop the potential they were created for — living a life of impact, influence, and legacy.",
-      "His work rests on a simple conviction: every person was designed with a unique purpose, and most live far below their true potential — not for lack of ability, but because of fear, conditioning, and a borrowed identity. Jairo combines personal depth with practical application to help his audiences close that gap.",
+      "Jairo J. García is an author, international speaker, and personal transformation coach. His work starts from a simple but uncomfortable idea: most people live far below the potential they were created with — not for lack of ability, but because of fear, conditioning, and a borrowed identity.",
+      "Through his books, talks, and coaching programs, he helps people name that fear, reconnect with their purpose, and build a life of real impact.",
     ],
     cta: { label: "Read my full story", href: "/en/about" },
   },
   philosophy: {
     heading: "Philosophy",
-    intro: "Everything I teach rests on four convictions.",
+    frameworkName: "The SuperHuman Code",
+    intro: "Four principles behind every book, every talk, and every decision.",
     pillars: [
       {
         id: "identity",
@@ -41,10 +43,10 @@ export const home: HomeContent = {
           "Purpose isn't an inspirational phrase — it's the filter that lets you decide what to pursue and what to let go of. Without it, success becomes noise.",
       },
       {
-        id: "fear",
-        title: "The fear of success is real",
+        id: "courage",
+        title: "Courage to act with fear",
         description:
-          "Many people don't fear failing — they fear what winning demands: visibility, responsibility, change. Naming it is the first step to overcoming it.",
+          "Fear doesn't disappear before you act — it disappears after. Courage isn't the absence of fear: it's deciding to move with it, especially when what's at stake is visibility, responsibility, and change.",
       },
       {
         id: "legacy",
@@ -112,6 +114,7 @@ export const home: HomeContent = {
         id: "t1",
         name: "Andrea M.",
         role: "HR Director",
+        company: "Tech industry",
         quote:
           "Jairo's message helped us rethink leadership from the inside out. The impact on our team was immediate.",
       },
@@ -130,10 +133,19 @@ export const home: HomeContent = {
     ],
   },
   contact: {
-    heading: "Let's talk",
-    description:
-      "Want to invite Jairo to your event, company, or media outlet? Reach out and we'll get back to you soon.",
+    heading: "Ready to activate the version of you that you were made for?",
+    description: "You don't need to have it all figured out. Just the next step — and it starts here.",
     email: CONTACT_EMAIL,
-    cta: { label: "Send a message", href: `mailto:${CONTACT_EMAIL}` },
+    buttons: [
+      { label: "Book me for your event", href: staticRoutes.speaking.en },
+      {
+        label: "I want coaching",
+        href: `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("I'd like information about 1:1 coaching")}`,
+      },
+      {
+        label: "Discover SuperHumans",
+        href: `${staticRoutes.books.en}/${bookSlugs.superhumanos.en}`,
+      },
+    ],
   },
 };

@@ -26,6 +26,7 @@ export const site: SiteContent = {
     contact: { label: "Contacto", href: "/#contacto" },
   },
   footer: {
+    memorableLine: "No naciste para vivir una vida en serie. Fuiste creado para dejar un legado.",
     rightsLine: "Jairo J. García. Todos los derechos reservados.",
     builtLine: "Diseñado para vivir con propósito.",
   },

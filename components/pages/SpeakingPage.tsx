@@ -6,9 +6,11 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
+import { VideoReel } from "@/components/ui/VideoReel";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { breadcrumbSchema, faqPageSchema, webPageSchema } from "@/lib/seo/jsonld";
 import { staticRoutes } from "@/lib/i18n/slug-map";
+import { MEDIA } from "@/lib/media";
 import type { Locale, SiteContent, SpeakingContent } from "@/lib/content/types";
 
 export function SpeakingPage({
@@ -35,14 +37,26 @@ export function SpeakingPage({
           faqPageSchema(speaking.faqs),
         ]}
       />
-      <Container className="pt-16">
+      <Container className="pt-8">
         <Breadcrumbs items={breadcrumbItems} />
-        <h1 className="text-4xl font-semibold text-cream-50 sm:text-5xl">{speaking.heading}</h1>
-        <p className="mt-4 max-w-2xl text-lg text-cream-400">{speaking.intro}</p>
-        <Button href={speaking.cta.href} className="mt-8">
-          {speaking.cta.label}
-        </Button>
       </Container>
+
+      <section className="relative flex h-[65vh] min-h-[440px] items-end overflow-hidden">
+        <VideoReel src={MEDIA.speakingReel} />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/50 to-transparent"
+        />
+        <Container className="relative pb-14">
+          <AnimatedReveal>
+            <h1 className="max-w-2xl text-4xl font-semibold text-cream-50 sm:text-5xl">{speaking.heading}</h1>
+            <p className="mt-4 max-w-2xl text-lg text-cream-200">{speaking.intro}</p>
+            <Button href={speaking.cta.href} className="mt-8">
+              {speaking.cta.label}
+            </Button>
+          </AnimatedReveal>
+        </Container>
+      </section>
 
       <section className="py-20">
         <Container>

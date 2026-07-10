@@ -1,32 +1,34 @@
 import type { HomeContent } from "@/lib/content/types";
 import { CONTACT_EMAIL } from "@/lib/constants";
+import { bookSlugs, staticRoutes } from "@/lib/i18n/slug-map";
 
 export const home: HomeContent = {
   hero: {
     eyebrow: "Autor · Conferencista · Coach de Transformación",
     headline: "Fuiste creado en serio, no en serie.",
     subheadline:
-      "Jairo J. García ayuda a líderes, emprendedores y equipos a vencer el miedo al éxito, activar su propósito y construir una vida de impacto real.",
+      "No estás leyendo esto por accidente. Algo en ti sabe que hay una versión tuya —más valiente, más clara, más libre— que todavía no has decidido vivir. Esto es el principio de encontrarla.",
     primaryCta: { label: "Conoce mis libros", href: "/libros" },
     secondaryCta: { label: "Invítame a tu evento", href: "/conferencias" },
   },
   stats: [
-    { id: "stat-eventos", value: "+500", label: "Conferencias y eventos" },
-    { id: "stat-paises", value: "+15", label: "Países alcanzados" },
-    { id: "stat-personas", value: "+100,000", label: "Personas impactadas" },
-    { id: "stat-libros", value: "2", label: "Libros publicados" },
+    { id: "stat-eventos", value: "+500", label: "Escenarios que fueron el inicio de algo más grande" },
+    { id: "stat-paises", value: "+15", label: "Países donde el mensaje ya cruzó fronteras" },
+    { id: "stat-personas", value: "+100,000", label: "Personas que decidieron transformar su vida" },
+    { id: "stat-libros", value: "2", label: "Libros escritos para romper el molde" },
   ],
   about: {
     heading: "Sobre Jairo",
     paragraphs: [
-      "Jairo J. García es autor, conferencista internacional y coach especializado en liderazgo, propósito, identidad y transformación personal. A través de sus libros, conferencias y programas de formación, ayuda a las personas a romper sus límites, vencer el miedo al éxito y desarrollar el potencial con el que fueron creadas para vivir una vida de impacto, influencia y legado.",
-      "Su trabajo parte de una convicción simple: cada persona fue diseñada con un propósito único, y la mayoría vive muy por debajo de su verdadero potencial — no por falta de capacidad, sino por miedo, condicionamiento y una identidad prestada. Jairo combina profundidad personal con aplicación práctica para cerrar esa brecha.",
+      "Jairo J. García es autor, conferencista internacional y coach de transformación personal. Su trabajo parte de una idea simple pero incómoda: la mayoría de las personas vive muy por debajo del potencial con el que fue creada — no por falta de capacidad, sino por miedo, condicionamiento y una identidad prestada.",
+      "A través de sus libros, conferencias y programas de coaching, ayuda a las personas a nombrar ese miedo, reconectar con su propósito y construir una vida de impacto real.",
     ],
     cta: { label: "Conoce mi historia completa", href: "/sobre-mi" },
   },
   philosophy: {
     heading: "Filosofía",
-    intro: "Todo lo que enseño se sostiene sobre cuatro convicciones.",
+    frameworkName: "El Código SuperHumano",
+    intro: "Cuatro principios que sostienen cada libro, cada conferencia y cada decisión.",
     pillars: [
       {
         id: "identidad",
@@ -41,10 +43,10 @@ export const home: HomeContent = {
           "El propósito no es una frase inspiradora: es el criterio que te permite decidir qué perseguir y qué soltar. Sin él, el éxito se vuelve ruido.",
       },
       {
-        id: "miedo",
-        title: "El miedo al éxito es real",
+        id: "valentia",
+        title: "Valentía para actuar con miedo",
         description:
-          "Muchas personas no le temen a fracasar — le temen a lo que implica triunfar: visibilidad, responsabilidad, cambio. Nombrarlo es el primer paso para vencerlo.",
+          "El miedo no desaparece antes de actuar — desaparece después. La valentía no es la ausencia de miedo: es decidir moverte con él, sobre todo cuando lo que está en juego es visibilidad, responsabilidad y cambio.",
       },
       {
         id: "legado",
@@ -114,6 +116,7 @@ export const home: HomeContent = {
         id: "t1",
         name: "Andrea M.",
         role: "Directora de Recursos Humanos",
+        company: "Sector tecnología",
         quote:
           "El mensaje de Jairo nos ayudó a repensar el liderazgo desde adentro hacia afuera. El impacto en nuestro equipo fue inmediato.",
       },
@@ -134,10 +137,20 @@ export const home: HomeContent = {
     ],
   },
   contact: {
-    heading: "Hablemos",
+    heading: "¿Estás listo para activar la versión para la que fuiste creado?",
     description:
-      "¿Quieres invitar a Jairo a tu evento, empresa o medio de comunicación? Escríbenos y te responderemos pronto.",
+      "No hace falta que tengas todo resuelto. Solo el siguiente paso — y ese empieza aquí.",
     email: CONTACT_EMAIL,
-    cta: { label: "Enviar mensaje", href: `mailto:${CONTACT_EMAIL}` },
+    buttons: [
+      { label: "Invítame a tu evento", href: staticRoutes.speaking.es },
+      {
+        label: "Quiero Coaching",
+        href: `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Quiero información sobre coaching 1:1")}`,
+      },
+      {
+        label: "Conoce SuperHumanos",
+        href: `${staticRoutes.books.es}/${bookSlugs.superhumanos.es}`,
+      },
+    ],
   },
 };

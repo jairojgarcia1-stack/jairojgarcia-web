@@ -26,6 +26,7 @@ export const site: SiteContent = {
     contact: { label: "Contact", href: "/en#contact" },
   },
   footer: {
+    memorableLine: "You weren't born to live a life on repeat. You were made to leave a legacy.",
     rightsLine: "Jairo J. García. All rights reserved.",
     builtLine: "Built to live with purpose.",
   },

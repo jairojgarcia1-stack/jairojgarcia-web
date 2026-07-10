@@ -1,5 +1,11 @@
 import type { Book, BooksContent } from "@/lib/content/types";
-import { bookSlugs } from "@/lib/i18n/slug-map";
+import { bookSlugs, staticRoutes } from "@/lib/i18n/slug-map";
+import { CONTACT_EMAIL } from "@/lib/constants";
+import { MEDIA } from "@/lib/media";
+
+function purchaseHref(title: string) {
+  return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(`Quiero comprar ${title}`)}`;
+}
 
 export const booksContent: BooksContent = {
   heading: "Libros",
@@ -14,7 +20,7 @@ export const books: Book[] = [
     title: "SuperHumanos",
     subtitle: "Fuiste creado en SERIO, no en SERIE",
     year: 2026,
-    coverImage: "",
+    coverImage: MEDIA.bookCovers.superhumanos,
     shortDescription:
       "Un libro de desarrollo personal y propósito que guía al lector a descubrir su identidad, romper las limitaciones del miedo y activar el potencial con el que fue creado para vivir una vida de impacto y legado.",
     longDescription: [
@@ -27,9 +33,12 @@ export const books: Book[] = [
       text: "No fuiste creado en serie. Fuiste creado en serio.",
       author: "Jairo J. García",
     },
-    buyLinks: [
-      { label: "Próximamente", href: "/#contacto" },
-    ],
+    links: {
+      purchaseLabel: "Comprar",
+      purchaseHref: purchaseHref("SuperHumanos"),
+      sampleLabel: "Leer muestra",
+      sampleHref: `${staticRoutes.books.es}/${bookSlugs.superhumanos.es}#extracto`,
+    },
     faqs: [
       {
         question: "¿De qué trata SuperHumanos?",
@@ -53,7 +62,7 @@ export const books: Book[] = [
     title: "Sin Miedo al Éxito",
     subtitle: "Identifica y vence el miedo que sabotea tu crecimiento",
     year: 2023,
-    coverImage: "",
+    coverImage: MEDIA.bookCovers["sin-miedo-al-exito"],
     shortDescription:
       "Una obra enfocada en ayudar a las personas a identificar y vencer el miedo al éxito, transformar su mentalidad y desarrollar la confianza necesaria para alcanzar una vida de mayor propósito, influencia y resultados.",
     longDescription: [
@@ -66,9 +75,12 @@ export const books: Book[] = [
       text: "El éxito no es el problema. El miedo a merecerlo, sí.",
       author: "Jairo J. García",
     },
-    buyLinks: [
-      { label: "Disponible próximamente en línea", href: "/#contacto" },
-    ],
+    links: {
+      purchaseLabel: "Comprar",
+      purchaseHref: purchaseHref("Sin Miedo al Éxito"),
+      sampleLabel: "Leer muestra",
+      sampleHref: `${staticRoutes.books.es}/${bookSlugs["sin-miedo-al-exito"].es}#extracto`,
+    },
     faqs: [
       {
         question: "¿De qué trata Sin Miedo al Éxito?",

@@ -5,9 +5,11 @@ import { AnimatedReveal } from "@/components/ui/AnimatedReveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
+import { EditorialPhoto } from "@/components/ui/EditorialPhoto";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { breadcrumbSchema, webPageSchema } from "@/lib/seo/jsonld";
 import { staticRoutes } from "@/lib/i18n/slug-map";
+import { MEDIA } from "@/lib/media";
 import type { AboutContent, Locale, SiteContent } from "@/lib/content/types";
 
 export function AboutPage({
@@ -51,6 +53,14 @@ export function AboutPage({
           </AnimatedReveal>
         </Container>
       </section>
+
+      <Container className="pb-16">
+        <AnimatedReveal>
+          <div className="relative aspect-[21/9] w-full overflow-hidden rounded-2xl border border-ink-700">
+            <EditorialPhoto src={MEDIA.aboutPortrait} alt="Jairo J. García" sizes="90vw" />
+          </div>
+        </AnimatedReveal>
+      </Container>
 
       <section className="border-t border-ink-800 py-16">
         <Container className="max-w-3xl">

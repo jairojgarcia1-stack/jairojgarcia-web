@@ -4,6 +4,7 @@ import { Container } from "@/components/ui/Container";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { AnimatedReveal } from "@/components/ui/AnimatedReveal";
 import { BookCover } from "@/components/ui/BookCover";
+import { TiltCard } from "@/components/ui/TiltCard";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { breadcrumbSchema, webPageSchema } from "@/lib/seo/jsonld";
 import { staticRoutes } from "@/lib/i18n/slug-map";
@@ -25,6 +26,7 @@ export function BooksIndexPage({
     { name: site.nav.home.label, path: staticRoutes.home[locale] },
     { name: site.nav.books.label, path },
   ];
+  const moreInfoLabel = locale === "es" ? "Más información" : "More info";
 
   return (
     <PageShell site={site}>
@@ -41,21 +43,37 @@ export function BooksIndexPage({
       </Container>
 
       <section className="py-16">
-        <Container className="grid gap-16 sm:grid-cols-2">
-          {books.map((book, index) => (
-            <AnimatedReveal key={book.id} delay={index * 0.1}>
-              <Link href={`${path}/${book.slug}`} className="group grid gap-6 sm:grid-cols-[0.8fr_1.2fr] sm:items-start">
-                <BookCover title={book.title} subtitle={book.subtitle} />
-                <div>
-                  <p className="text-sm text-gold-400">{book.year}</p>
-                  <h2 className="mt-1 font-display text-2xl font-semibold text-cream-50 group-hover:text-gold-300">
-                    {book.title}
-                  </h2>
-                  <p className="mt-3 text-cream-400">{book.shortDescription}</p>
+        <Container className="flex flex-col gap-20">
+          {books.map((book, index) => {
+            const detailPath = `${path}/${book.slug}`;
+            return (
+              <AnimatedReveal key={book.id} delay={index * 0.1}>
+                <div className="grid gap-8 sm:grid-cols-[0.7fr_1.3fr] sm:items-start">
+                  <TiltCard className="mx-auto w-full max-w-xs sm:mx-0">
+                    <Link href={detailPath} className="block">
+                      <BookCover title={book.title} subtitle={book.subtitle} coverImage={book.coverImage} />
+                    </Link>
+                  </TiltCard>
+                  <div>
+                    <p className="text-sm text-gold-400">{book.year}</p>
+                    <h2 className="mt-1 font-display text-2xl font-semibold text-cream-50">{book.title}</h2>
+                    <p className="mt-3 text-cream-400">{book.shortDescription}</p>
+                    <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
+                      <a href={book.links.purchaseHref} className="font-medium text-gold-300 hover:text-gold-200">
+                        {book.links.purchaseLabel}
+                      </a>
+                      <Link href={book.links.sampleHref} className="text-cream-300 hover:text-gold-300">
+                        {book.links.sampleLabel}
+                      </Link>
+                      <Link href={detailPath} className="text-cream-300 hover:text-gold-300">
+                        {moreInfoLabel}
+                      </Link>
+                    </div>
+                  </div>
                 </div>
-              </Link>
-            </AnimatedReveal>
-          ))}
+              </AnimatedReveal>
+            );
+          })}
         </Container>
       </section>
     </PageShell>

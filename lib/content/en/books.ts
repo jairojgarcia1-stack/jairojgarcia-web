@@ -1,5 +1,11 @@
 import type { Book, BooksContent } from "@/lib/content/types";
-import { bookSlugs } from "@/lib/i18n/slug-map";
+import { bookSlugs, staticRoutes } from "@/lib/i18n/slug-map";
+import { CONTACT_EMAIL } from "@/lib/constants";
+import { MEDIA } from "@/lib/media";
+
+function purchaseHref(title: string) {
+  return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(`I want to buy ${title}`)}`;
+}
 
 export const booksContent: BooksContent = {
   heading: "Books",
@@ -14,7 +20,7 @@ export const books: Book[] = [
     title: "SuperHumans",
     subtitle: "You Were Made With Purpose, Not Mass-Produced",
     year: 2026,
-    coverImage: "",
+    coverImage: MEDIA.bookCovers.superhumanos,
     shortDescription:
       "A personal-development book on purpose and identity that guides readers to discover who they are, break free from the limits of fear, and activate the potential they were created with to live a life of impact and legacy.",
     longDescription: [
@@ -27,7 +33,12 @@ export const books: Book[] = [
       text: "You weren't mass-produced. You were made with purpose.",
       author: "Jairo J. García",
     },
-    buyLinks: [{ label: "Coming soon", href: "/en#contact" }],
+    links: {
+      purchaseLabel: "Buy",
+      purchaseHref: purchaseHref("SuperHumans"),
+      sampleLabel: "Read a sample",
+      sampleHref: `${staticRoutes.books.en}/${bookSlugs.superhumanos.en}#excerpt`,
+    },
     faqs: [
       {
         question: "What is SuperHumans about?",
@@ -51,7 +62,7 @@ export const books: Book[] = [
     title: "No Fear of Success",
     subtitle: "Identify and overcome the fear sabotaging your growth",
     year: 2023,
-    coverImage: "",
+    coverImage: MEDIA.bookCovers["sin-miedo-al-exito"],
     shortDescription:
       "A book focused on helping people identify and overcome the fear of success, shift their mindset, and build the confidence needed to reach a life of greater purpose, influence, and results.",
     longDescription: [
@@ -64,7 +75,12 @@ export const books: Book[] = [
       text: "Success isn't the problem. Fearing you deserve it is.",
       author: "Jairo J. García",
     },
-    buyLinks: [{ label: "Available soon online", href: "/en#contact" }],
+    links: {
+      purchaseLabel: "Buy",
+      purchaseHref: purchaseHref("No Fear of Success"),
+      sampleLabel: "Read a sample",
+      sampleHref: `${staticRoutes.books.en}/${bookSlugs["sin-miedo-al-exito"].en}#excerpt`,
+    },
     faqs: [
       {
         question: "What is No Fear of Success about?",

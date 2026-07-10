@@ -3,6 +3,7 @@ import { Container } from "@/components/ui/Container";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { AnimatedReveal } from "@/components/ui/AnimatedReveal";
 import { BookCover } from "@/components/ui/BookCover";
+import { TiltCard } from "@/components/ui/TiltCard";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -43,9 +44,9 @@ export function BookDetailPage({
       <section className="pb-16">
         <Container className="grid gap-12 sm:grid-cols-[0.8fr_1.2fr] sm:items-start">
           <AnimatedReveal>
-            <div className="mx-auto max-w-xs sm:mx-0">
-              <BookCover title={book.title} subtitle={book.subtitle} />
-            </div>
+            <TiltCard className="mx-auto max-w-xs sm:mx-0">
+              <BookCover title={book.title} subtitle={book.subtitle} coverImage={book.coverImage} />
+            </TiltCard>
           </AnimatedReveal>
           <AnimatedReveal delay={0.1}>
             <p className="text-sm font-medium uppercase tracking-wide text-gold-400">{book.year}</p>
@@ -60,17 +61,16 @@ export function BookDetailPage({
             </div>
 
             <div className="mt-8 flex flex-wrap gap-4">
-              {book.buyLinks.map((link) => (
-                <Button key={link.label} href={link.href} variant="secondary">
-                  {link.label}
-                </Button>
-              ))}
+              <Button href={book.links.purchaseHref}>{book.links.purchaseLabel}</Button>
+              <Button href={book.links.sampleHref} variant="secondary">
+                {book.links.sampleLabel}
+              </Button>
             </div>
           </AnimatedReveal>
         </Container>
       </section>
 
-      <section className="border-t border-ink-800 py-16">
+      <section id={locale === "es" ? "extracto" : "excerpt"} className="scroll-mt-24 border-t border-ink-800 py-16">
         <Container className="max-w-3xl">
           <AnimatedReveal>
             <blockquote className="border-l-2 border-gold-400 pl-6 font-display text-2xl italic text-cream-100">

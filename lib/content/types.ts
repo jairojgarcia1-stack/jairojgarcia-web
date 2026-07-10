@@ -25,6 +25,7 @@ export interface SiteContent {
     contact: NavItem;
   };
   footer: {
+    memorableLine: string;
     rightsLine: string;
     builtLine: string;
   };
@@ -54,7 +55,10 @@ export interface Testimonial {
   id: string;
   name: string;
   role: string;
+  company?: string;
   quote: string;
+  photo?: string;
+  videoUrl?: string;
 }
 
 export interface PressMention {
@@ -86,6 +90,7 @@ export interface HomeContent {
   };
   philosophy: {
     heading: string;
+    frameworkName: string;
     intro: string;
     pillars: PhilosophyPillar[];
   };
@@ -114,7 +119,7 @@ export interface HomeContent {
     heading: string;
     description: string;
     email: string;
-    cta: { label: string; href: string };
+    buttons: { label: string; href: string }[];
   };
 }
 
@@ -157,7 +162,12 @@ export interface Book {
   longDescription: string[];
   themes: string[];
   quote: { text: string; author: string };
-  buyLinks: { label: string; href: string }[];
+  links: {
+    purchaseLabel: string;
+    purchaseHref: string;
+    sampleLabel: string;
+    sampleHref: string;
+  };
   faqs: FaqItem[];
 }
 

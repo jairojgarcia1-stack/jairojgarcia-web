@@ -15,7 +15,12 @@ export function Footer({ site }: { site: SiteContent }) {
 
   return (
     <footer className="border-t border-ink-800 bg-ink-950">
-      <Container className="flex flex-col gap-10 py-16">
+      <Container className="py-16">
+        <p className="max-w-2xl font-display text-2xl italic leading-snug text-cream-100 sm:text-3xl">
+          &ldquo;{site.footer.memorableLine}&rdquo;
+        </p>
+      </Container>
+      <Container className="flex flex-col gap-10 border-t border-ink-800 py-16">
         <div className="flex flex-col justify-between gap-10 md:flex-row">
           <div className="max-w-sm">
             <p className="font-display text-lg font-semibold text-cream-50">{AUTHOR_NAME}</p>

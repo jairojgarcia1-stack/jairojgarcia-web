@@ -7,7 +7,7 @@ import type { HomeContent } from "@/lib/content/types";
 
 export function Speaking({ speaking }: { speaking: HomeContent["speaking"] }) {
   return (
-    <section className="border-y border-ink-800 bg-ink-900/40 py-24">
+    <section className="border-y border-ink-800 bg-ink-900/40 py-28">
       <Container className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:items-center">
         <AnimatedReveal>
           <SectionHeading title={speaking.heading} intro={speaking.description} />
