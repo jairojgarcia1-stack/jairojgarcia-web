@@ -131,7 +131,7 @@ export const home: HomeContent = {
     ],
   },
   testimonials: {
-    heading: "What people say after the transformation",
+    heading: "What audiences say after hearing him",
     items: [
       {
         id: "t1",

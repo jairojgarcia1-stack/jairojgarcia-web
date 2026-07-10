@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { PageShell } from "@/components/layout/PageShell";
 import { Container } from "@/components/ui/Container";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
@@ -7,6 +8,8 @@ import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { VideoReel } from "@/components/ui/VideoReel";
+import { StatCounter } from "@/components/ui/StatCounter";
+import { SpeakingInquiryForm } from "@/components/forms/SpeakingInquiryForm";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { breadcrumbSchema, faqPageSchema, webPageSchema } from "@/lib/seo/jsonld";
 import { staticRoutes } from "@/lib/i18n/slug-map";
@@ -51,9 +54,21 @@ export function SpeakingPage({
           <AnimatedReveal>
             <h1 className="max-w-2xl text-4xl font-semibold text-cream-50 sm:text-5xl">{speaking.heading}</h1>
             <p className="mt-4 max-w-2xl text-lg text-cream-200">{speaking.intro}</p>
-            <Button href={speaking.cta.href} className="mt-8">
+            <Button href="#solicitar" className="mt-8">
               {speaking.cta.label}
             </Button>
+          </AnimatedReveal>
+        </Container>
+      </section>
+
+      <section className="border-b border-ink-800 bg-ink-900/40 py-14">
+        <Container>
+          <AnimatedReveal>
+            <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
+              {speaking.trustStats.map((stat) => (
+                <StatCounter key={stat.id} value={stat.value} label={stat.label} locale={locale} />
+              ))}
+            </div>
           </AnimatedReveal>
         </Container>
       </section>
@@ -77,7 +92,7 @@ export function SpeakingPage({
       <section className="border-t border-ink-800 py-20">
         <Container>
           <SectionHeading title={locale === "es" ? "Formatos" : "Formats"} />
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-6 sm:grid-cols-3">
             {speaking.formats.map((format, index) => (
               <AnimatedReveal key={format.id} delay={index * 0.08}>
                 <Card className="h-full">
@@ -96,6 +111,33 @@ export function SpeakingPage({
           <div className="mt-8 flex flex-wrap gap-3">
             {speaking.audience.map((item) => (
               <Badge key={item}>{item}</Badge>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section id="solicitar" className="scroll-mt-24 border-t border-ink-800 py-20">
+        <Container className="max-w-2xl">
+          <SpeakingInquiryForm form={speaking.inquiryForm} />
+          <p className="mt-6 text-center text-sm text-cream-400">
+            <Link href={staticRoutes.press[locale]} className="text-gold-300 hover:text-gold-200">
+              {speaking.pressKitLabel}
+            </Link>
+          </p>
+        </Container>
+      </section>
+
+      <section className="border-t border-ink-800 py-20">
+        <Container>
+          <SectionHeading title={speaking.programsHeading} intro={speaking.programsIntro} />
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 sm:max-w-xl">
+            {speaking.programs.map((program, index) => (
+              <AnimatedReveal key={program.id} delay={index * 0.08}>
+                <div className="rounded-xl border border-ink-800 p-5">
+                  <h3 className="font-display text-base font-semibold text-cream-50">{program.title}</h3>
+                  <p className="mt-2 text-sm text-cream-400">{program.description}</p>
+                </div>
+              </AnimatedReveal>
             ))}
           </div>
         </Container>

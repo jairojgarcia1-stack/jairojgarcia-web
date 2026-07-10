@@ -5,6 +5,11 @@ export const speaking: SpeakingContent = {
   heading: "Speaking",
   intro:
     "Jairo brings his message on leadership, purpose, identity, and the fear of success to companies, universities, churches, and international conferences, combining storytelling, applicable content, and an energy that moves audiences to action.",
+  trustStats: [
+    { id: "stat-events", value: "500+", label: "Talks and events" },
+    { id: "stat-countries", value: "15+", label: "Countries reached" },
+    { id: "stat-people", value: "100,000+", label: "People impacted" },
+  ],
   topics: [
     {
       id: "purpose-leadership",
@@ -51,6 +56,10 @@ export const speaking: SpeakingContent = {
       title: "University talk",
       description: "A format adapted for younger audiences at universities and educational institutions.",
     },
+  ],
+  programsHeading: "Coaching Programs",
+  programsIntro: "A closer kind of guidance, off the stage.",
+  programs: [
     {
       id: "coaching-1a1",
       title: "1:1 Coaching",
@@ -73,10 +82,38 @@ export const speaking: SpeakingContent = {
     href: `mailto:${CONTACT_EMAIL}`,
     email: CONTACT_EMAIL,
   },
+  inquiryForm: {
+    heading: "Request availability",
+    intro: "Tell us about your event and we'll get back to you with availability and details.",
+    nameLabel: "Name",
+    companyLabel: "Company or organization",
+    eventTypeLabel: "Event type",
+    eventDateLabel: "Estimated date",
+    audienceSizeLabel: "Audience size",
+    messageLabel: "Tell us more about your event",
+    submitLabel: "Send request",
+    fallbackText: "If your email client didn't open, reach out directly to",
+  },
+  pressKitLabel: "Need a bio, photos, or video for your team? Download the press kit",
   faqs: [
     {
       question: "How can I book Jairo J. García for my event?",
-      answer: `Email ${CONTACT_EMAIL} with your event's date, location, and audience type, and we'll get back to you with availability and details.`,
+      answer: `Fill out the form on this page or email ${CONTACT_EMAIL} with your event's date, location, and audience type, and we'll get back to you with availability and details.`,
+    },
+    {
+      question: "What's the process for booking a date?",
+      answer:
+        "After we receive your request, we set up a short call to understand your event's goals, confirm availability, and finalize logistics and contract details.",
+    },
+    {
+      question: "Does he travel internationally for talks?",
+      answer:
+        "Yes. Jairo has brought his message to audiences in over 15 countries and travels internationally for conferences, congresses, and corporate events.",
+    },
+    {
+      question: "Is there video available to review before booking?",
+      answer:
+        "Yes, this page includes real footage of Jairo on stage. For additional material (extended video, high-resolution photos, bio), reach out or visit the press kit.",
     },
     {
       question: "What languages does he speak in?",
@@ -85,7 +122,7 @@ export const speaking: SpeakingContent = {
     {
       question: "What speaking formats are available?",
       answer:
-        "Keynotes, interactive workshops, talks adapted for university audiences, and both 1:1 and group coaching sessions, depending on your event's needs.",
+        "Keynotes, interactive workshops, and talks adapted for university audiences. He also offers 1:1 and group coaching programs separately, outside the speaking format.",
     },
     {
       question: "What are his main speaking topics?",

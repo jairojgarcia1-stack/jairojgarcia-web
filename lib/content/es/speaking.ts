@@ -5,6 +5,11 @@ export const speaking: SpeakingContent = {
   heading: "Conferencias",
   intro:
     "Jairo lleva su mensaje sobre liderazgo, propósito, identidad y miedo al éxito a empresas, universidades, iglesias y conferencias internacionales, combinando storytelling, contenido aplicable y una energía que mueve a la acción.",
+  trustStats: [
+    { id: "stat-eventos", value: "+500", label: "Conferencias y eventos" },
+    { id: "stat-paises", value: "+15", label: "Países alcanzados" },
+    { id: "stat-personas", value: "+100,000", label: "Personas impactadas" },
+  ],
   topics: [
     {
       id: "liderazgo-proposito",
@@ -53,6 +58,10 @@ export const speaking: SpeakingContent = {
       title: "Charla universitaria",
       description: "Formato adaptado para audiencias jóvenes en universidades e instituciones educativas.",
     },
+  ],
+  programsHeading: "Programas de coaching",
+  programsIntro: "Un acompañamiento más cercano, por fuera del escenario.",
+  programs: [
     {
       id: "coaching-1a1",
       title: "Coaching 1:1",
@@ -75,10 +84,38 @@ export const speaking: SpeakingContent = {
     href: `mailto:${CONTACT_EMAIL}`,
     email: CONTACT_EMAIL,
   },
+  inquiryForm: {
+    heading: "Solicita disponibilidad",
+    intro: "Cuéntanos sobre tu evento y te respondemos con la disponibilidad y los detalles.",
+    nameLabel: "Nombre",
+    companyLabel: "Empresa u organización",
+    eventTypeLabel: "Tipo de evento",
+    eventDateLabel: "Fecha estimada",
+    audienceSizeLabel: "Tamaño de audiencia",
+    messageLabel: "Cuéntanos más sobre tu evento",
+    submitLabel: "Enviar solicitud",
+    fallbackText: "Si no se abrió tu cliente de correo, escríbenos directamente a",
+  },
+  pressKitLabel: "¿Necesitas biografía, fotos o video para tu equipo? Descarga el kit de prensa",
   faqs: [
     {
       question: "¿Cómo puedo invitar a Jairo J. García a mi evento?",
-      answer: `Escríbenos a ${CONTACT_EMAIL} con la fecha, el lugar y el tipo de audiencia de tu evento, y te responderemos con la disponibilidad y los detalles.`,
+      answer: `Completa el formulario de esta página o escríbenos a ${CONTACT_EMAIL} con la fecha, el lugar y el tipo de audiencia de tu evento, y te responderemos con la disponibilidad y los detalles.`,
+    },
+    {
+      question: "¿Cuál es el proceso para reservar una fecha?",
+      answer:
+        "Después de recibir tu solicitud, coordinamos una llamada breve para entender el objetivo del evento, confirmamos disponibilidad y formalizamos los detalles logísticos y de contrato.",
+    },
+    {
+      question: "¿Viaja internacionalmente para conferencias?",
+      answer:
+        "Sí. Jairo ha llevado su mensaje a audiencias en más de 15 países y viaja internacionalmente para conferencias, congresos y eventos corporativos.",
+    },
+    {
+      question: "¿Hay video disponible para revisar antes de confirmar?",
+      answer:
+        "Sí, en esta misma página puedes ver un video real de Jairo en escenario. Para material adicional (video extendido, fotos en alta resolución, biografía), escríbenos o visita el kit de prensa.",
     },
     {
       question: "¿En qué idiomas ofrece conferencias?",
@@ -87,7 +124,7 @@ export const speaking: SpeakingContent = {
     {
       question: "¿Qué formatos de conferencia ofrece?",
       answer:
-        "Conferencia magistral (keynote), talleres interactivos, charlas adaptadas para audiencias universitarias, y sesiones de coaching tanto 1:1 como grupales, según las necesidades del evento.",
+        "Conferencia magistral (keynote), talleres interactivos, y charlas adaptadas para audiencias universitarias. También ofrece programas de coaching 1:1 y grupal por separado, fuera del formato de conferencia.",
     },
     {
       question: "¿Cuáles son los temas principales de sus conferencias?",

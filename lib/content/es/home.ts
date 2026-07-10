@@ -134,7 +134,7 @@ export const home: HomeContent = {
     ],
   },
   testimonials: {
-    heading: "Lo que dicen quienes han vivido la transformación",
+    heading: "Lo que dice el público después de escucharlo",
     items: [
       {
         id: "t1",

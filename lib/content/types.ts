@@ -206,10 +206,27 @@ export interface SpeakingFormat {
 export interface SpeakingContent {
   heading: string;
   intro: string;
+  trustStats: StatItem[];
   topics: SpeakingTopic[];
   formats: SpeakingFormat[];
+  programsHeading: string;
+  programsIntro: string;
+  programs: SpeakingFormat[];
   audience: string[];
   cta: { label: string; href: string; email: string };
+  inquiryForm: {
+    heading: string;
+    intro: string;
+    nameLabel: string;
+    companyLabel: string;
+    eventTypeLabel: string;
+    eventDateLabel: string;
+    audienceSizeLabel: string;
+    messageLabel: string;
+    submitLabel: string;
+    fallbackText: string;
+  };
+  pressKitLabel: string;
   faqs: FaqItem[];
 }
 
