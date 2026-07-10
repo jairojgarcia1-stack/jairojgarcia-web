@@ -4,6 +4,7 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { AnimatedReveal } from "@/components/ui/AnimatedReveal";
 import { BookCover } from "@/components/ui/BookCover";
 import { TiltCard } from "@/components/ui/TiltCard";
+import { TrailerVideo } from "@/components/ui/TrailerVideo";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -87,6 +88,25 @@ export function BookDetailPage({
           </AnimatedReveal>
         </Container>
       </section>
+
+      {book.trailerVideo ? (
+        <section className="border-t border-ink-800 py-16">
+          <Container className="flex flex-col items-center">
+            <AnimatedReveal className="flex flex-col items-center">
+              <h2 className="text-2xl font-semibold text-cream-50">
+                {locale === "es" ? "Ver el tráiler" : "Watch the trailer"}
+              </h2>
+              <div className="mt-8">
+                <TrailerVideo
+                  src={book.trailerVideo}
+                  poster={book.coverImage}
+                  label={`${book.title} — ${locale === "es" ? "tráiler" : "trailer"}`}
+                />
+              </div>
+            </AnimatedReveal>
+          </Container>
+        </section>
+      ) : null}
 
       <section className="border-t border-ink-800 py-16">
         <Container className="max-w-3xl">

@@ -21,6 +21,7 @@ export const books: Book[] = [
     subtitle: "Fuiste creado en SERIO, no en SERIE",
     year: 2026,
     coverImage: MEDIA.bookCovers.superhumanos,
+    trailerVideo: MEDIA.bookTrailers.superhumanos,
     shortDescription:
       "Un libro de desarrollo personal y propósito que guía al lector a descubrir su identidad, romper las limitaciones del miedo y activar el potencial con el que fue creado para vivir una vida de impacto y legado.",
     longDescription: [
@@ -63,6 +64,7 @@ export const books: Book[] = [
     subtitle: "Identifica y vence el miedo que sabotea tu crecimiento",
     year: 2023,
     coverImage: MEDIA.bookCovers["sin-miedo-al-exito"],
+    trailerVideo: MEDIA.bookTrailers["sin-miedo-al-exito"],
     shortDescription:
       "Una obra enfocada en ayudar a las personas a identificar y vencer el miedo al éxito, transformar su mentalidad y desarrollar la confianza necesaria para alcanzar una vida de mayor propósito, influencia y resultados.",
     longDescription: [

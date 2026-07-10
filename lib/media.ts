@@ -4,7 +4,11 @@ export const MEDIA = {
   speakingReel: "/media/speaking-reel.mp4",
   bookCovers: {
     superhumanos: "/media/cover-superhumanos.png",
-    "sin-miedo-al-exito": "/media/cover-sin-miedo-al-exito.jpeg",
+    "sin-miedo-al-exito": "/media/cover-sin-miedo-al-exito.jpg",
+  },
+  bookTrailers: {
+    superhumanos: "/media/trailer-superhumanos.mp4",
+    "sin-miedo-al-exito": "/media/trailer-sin-miedo-al-exito.mp4",
   },
   testimonialPhotos: {
     t1: "/media/testimonial-1.jpg",

@@ -158,6 +158,7 @@ export interface Book {
   subtitle: string;
   year: number;
   coverImage: string;
+  trailerVideo?: string;
   shortDescription: string;
   longDescription: string[];
   themes: string[];

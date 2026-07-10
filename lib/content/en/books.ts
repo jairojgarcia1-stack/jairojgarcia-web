@@ -21,6 +21,7 @@ export const books: Book[] = [
     subtitle: "You Were Made With Purpose, Not Mass-Produced",
     year: 2026,
     coverImage: MEDIA.bookCovers.superhumanos,
+    trailerVideo: MEDIA.bookTrailers.superhumanos,
     shortDescription:
       "A personal-development book on purpose and identity that guides readers to discover who they are, break free from the limits of fear, and activate the potential they were created with to live a life of impact and legacy.",
     longDescription: [
@@ -63,6 +64,7 @@ export const books: Book[] = [
     subtitle: "Identify and overcome the fear sabotaging your growth",
     year: 2023,
     coverImage: MEDIA.bookCovers["sin-miedo-al-exito"],
+    trailerVideo: MEDIA.bookTrailers["sin-miedo-al-exito"],
     shortDescription:
       "A book focused on helping people identify and overcome the fear of success, shift their mindset, and build the confidence needed to reach a life of greater purpose, influence, and results.",
     longDescription: [
