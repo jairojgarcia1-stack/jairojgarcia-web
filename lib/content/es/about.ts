@@ -1,10 +1,12 @@
 import type { AboutContent } from "@/lib/content/types";
+import { trajectoryItems } from "@/lib/content/es/trajectory-items";
 
 export const about: AboutContent = {
   heading: "Sobre mí",
   intro: [
-    "Soy autor, conferencista internacional y coach especializado en liderazgo, propósito, identidad y transformación personal.",
+    "Soy autor, conferencista internacional, coach ejecutivo y empresario, especializado en liderazgo, propósito, identidad y transformación personal.",
     "Ayudo a las personas a romper sus límites, vencer el miedo al éxito y desarrollar el potencial con el que fueron creadas para vivir una vida de impacto, influencia y legado.",
+    "He fundado y liderado múltiples empresas en Estados Unidos, combinando liderazgo, estrategia y desarrollo humano para ayudar a personas y organizaciones a crecer con propósito.",
   ],
   story: [
     "Todo lo que enseño nace de una convicción que se fue construyendo con el tiempo: la mayoría de las personas no viven por debajo de su potencial por falta de capacidad, sino por una identidad prestada, un propósito difuso y un miedo que rara vez se nombra en voz alta — el miedo al éxito.",
@@ -39,37 +41,8 @@ export const about: AboutContent = {
     ],
   },
   timeline: {
-    heading: "Una trayectoria en construcción",
-    items: [
-      {
-        id: "inicio",
-        year: "Inicios",
-        title: "El comienzo del mensaje",
-        description:
-          "Comienzo a compartir mi mensaje sobre identidad, propósito y transformación personal en distintos espacios y audiencias.",
-      },
-      {
-        id: "2023",
-        year: "2023",
-        title: "Publicación de Sin Miedo al Éxito",
-        description:
-          "Se publica mi primer libro, enfocado en ayudar a las personas a vencer el miedo a triunfar y sostener su crecimiento.",
-      },
-      {
-        id: "expansion",
-        year: "Expansión",
-        title: "Conferencista internacional",
-        description:
-          "Mi mensaje comienza a llegar a audiencias en distintos países, a través de conferencias, medios y programas de formación.",
-      },
-      {
-        id: "2026",
-        year: "2026",
-        title: "Publicación de SuperHumanos",
-        description:
-          "Lanzo mi segundo libro, una invitación a descubrir la identidad y el potencial con el que cada persona fue creada.",
-      },
-    ],
+    heading: "Una trayectoria construida con propósito",
+    items: trajectoryItems,
   },
   cta: { label: "Ver mis libros", href: "/libros" },
 };

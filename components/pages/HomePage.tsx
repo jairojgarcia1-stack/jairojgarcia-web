@@ -1,12 +1,16 @@
 import { PageShell } from "@/components/layout/PageShell";
 import { Hero } from "@/components/sections/Hero";
 import { Stats } from "@/components/sections/Stats";
+import { InAction } from "@/components/sections/InAction";
 import { About } from "@/components/sections/About";
+import { PurposeStatement } from "@/components/sections/PurposeStatement";
 import { Philosophy } from "@/components/sections/Philosophy";
+import { Trajectory } from "@/components/sections/Trajectory";
 import { Speaking } from "@/components/sections/Speaking";
 import { BooksGrid } from "@/components/sections/BooksGrid";
 import { Ecosystem } from "@/components/sections/Ecosystem";
 import { SocialProof } from "@/components/sections/SocialProof";
+import { LogosStrip } from "@/components/sections/LogosStrip";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Contact } from "@/components/sections/Contact";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -46,8 +50,11 @@ export function HomePage({
       />
       <Hero hero={home.hero} />
       <Stats stats={home.stats} locale={locale} />
+      <InAction action={home.action} />
       <About about={home.about} />
+      <PurposeStatement purpose={home.purpose} />
       <Philosophy philosophy={home.philosophy} />
+      <Trajectory trajectory={home.trajectory} />
       <Speaking speaking={home.speaking} />
       <BooksGrid
         heading={home.booksHeading}
@@ -58,6 +65,7 @@ export function HomePage({
       />
       <Ecosystem ecosystem={home.ecosystem} locale={locale} />
       <SocialProof socialProof={home.socialProof} locale={locale} />
+      <LogosStrip locale={locale} />
       <Testimonials testimonials={home.testimonials} locale={locale} />
       <Contact contact={home.contact} id={locale === "es" ? "contacto" : "contact"} />
     </PageShell>

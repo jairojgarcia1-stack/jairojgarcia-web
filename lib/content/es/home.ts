@@ -1,10 +1,11 @@
 import type { HomeContent } from "@/lib/content/types";
 import { CONTACT_EMAIL } from "@/lib/constants";
 import { bookSlugs, staticRoutes } from "@/lib/i18n/slug-map";
+import { trajectoryItems } from "@/lib/content/es/trajectory-items";
 
 export const home: HomeContent = {
   hero: {
-    eyebrow: "Autor · Conferencista · Coach de Transformación",
+    eyebrow: "Autor · Conferencista Internacional · Coach Ejecutivo · Empresario",
     headline: "Fuiste creado en serio, no en serie.",
     subheadline:
       "No estás leyendo esto por accidente. Algo en ti sabe que hay una versión tuya —más valiente, más clara, más libre— que todavía no has decidido vivir. Esto es el principio de encontrarla.",
@@ -17,6 +18,21 @@ export const home: HomeContent = {
     { id: "stat-personas", value: "+100,000", label: "Personas que decidieron transformar su vida" },
     { id: "stat-libros", value: "2", label: "Libros escritos para romper el molde" },
   ],
+  action: {
+    heading: "En acción",
+    intro:
+      "Escenarios, conversaciones y momentos reales de un mensaje que ya está transformando vidas.",
+    videoAlt: "Jairo J. García hablando en vivo frente a una audiencia",
+    shots: [
+      { id: "action-1", alt: "Audiencia atenta durante una conferencia de Jairo J. García" },
+      { id: "action-2", alt: "Jairo J. García hablando con micrófono frente al público" },
+      { id: "action-3", alt: "Jairo J. García gesticulando con energía durante una charla" },
+      { id: "action-4", alt: "Asistente haciendo una pregunta durante una sesión en vivo" },
+      { id: "action-5", alt: "Jairo J. García conversando con otro speaker en un panel" },
+      { id: "action-6", alt: "Jairo J. García firmando ejemplares de su libro" },
+      { id: "action-7", alt: "Jairo J. García junto a asistentes que sostienen su libro" },
+    ],
+  },
   about: {
     heading: "Sobre Jairo",
     paragraphs: [
@@ -24,6 +40,9 @@ export const home: HomeContent = {
       "A través de sus libros, conferencias y programas de coaching, ayuda a las personas a nombrar ese miedo, reconectar con su propósito y construir una vida de impacto real.",
     ],
     cta: { label: "Conoce mi historia completa", href: "/sobre-mi" },
+  },
+  purpose: {
+    text: "Mi propósito nació el día que entendí algo que cambió todo: la mayoría de las personas vive muy por debajo del potencial con el que fue creada. No por falta de talento, sino porque en algún punto del camino aprendieron a conformarse, a esconderse, a posponer la vida que realmente querían vivir. Decidí dedicar mi vida a cambiar eso — a ayudar a las personas a recordar quiénes son, a vencer el miedo que las detiene y a construir algo que trascienda. Cada libro, cada conferencia y cada sesión de coaching nace de esa misma convicción: fuiste creado en serio, no en serie.",
   },
   philosophy: {
     heading: "Filosofía",
@@ -55,6 +74,11 @@ export const home: HomeContent = {
           "El objetivo no es solo alcanzar metas, sino convertirte en alguien cuya vida deje huella en las personas que te rodean.",
       },
     ],
+  },
+  trajectory: {
+    heading: "Una trayectoria construida con propósito",
+    intro: "Los hitos que marcaron el camino hasta hoy.",
+    items: trajectoryItems,
   },
   speaking: {
     heading: "Conferencias que transforman",

@@ -2,16 +2,17 @@ import type { SiteContent } from "@/lib/content/types";
 
 export const site: SiteContent = {
   locale: "en",
-  tagline: "Author, speaker, and personal transformation coach",
+  tagline: "Author, international speaker, executive coach, and entrepreneur",
   metaDescription:
-    "Jairo J. García is an author, international speaker, and coach specializing in leadership, purpose, identity, and personal transformation. Discover his books, speaking topics, and programs for a life of impact and legacy.",
+    "Jairo J. García is an author, international speaker, executive coach, and entrepreneur specializing in leadership, purpose, identity, and personal transformation. Discover his books, speaking topics, and programs for a life of impact and legacy.",
   metaKeywords: [
     "Jairo J. García",
     "purpose-driven leadership",
     "fear of success",
     "personal transformation",
-    "identity coach",
+    "executive coach",
     "international speaker",
+    "entrepreneur",
     "personal development",
     "SuperHumans book",
     "No Fear of Success book",

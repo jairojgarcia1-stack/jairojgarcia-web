@@ -10,7 +10,7 @@ export function personSchema(): JsonLdObject {
     "@id": `${SITE_URL}/#person`,
     name: AUTHOR_NAME,
     url: SITE_URL,
-    jobTitle: ["Author", "International Speaker", "Coach"],
+    jobTitle: ["Author", "International Speaker", "Executive Coach", "Entrepreneur"],
     sameAs: Object.values(SOCIAL_LINKS),
   };
 }

@@ -7,9 +7,10 @@ export const press: PressContent = {
     "Recursos e información de contacto para medios, productores y organizadores de eventos que deseen entrevistar, citar o presentar a Jairo J. García.",
   bio: {
     short:
-      "Jairo J. García es autor, conferencista internacional y coach especializado en liderazgo, propósito, identidad y transformación personal.",
+      "Jairo J. García es autor, conferencista internacional, coach ejecutivo y empresario, especializado en liderazgo, propósito, identidad y transformación personal.",
     long: [
-      "Jairo J. García es autor, conferencista internacional y coach especializado en liderazgo, propósito, identidad y transformación personal. A través de sus libros, conferencias y programas de formación, ayuda a las personas a romper sus límites, vencer el miedo al éxito y desarrollar el potencial con el que fueron creadas para vivir una vida de impacto, influencia y legado.",
+      "Jairo J. García es autor, conferencista internacional, coach ejecutivo y empresario, especializado en liderazgo, propósito, identidad y transformación personal. A través de sus libros, conferencias y programas de formación, ayuda a las personas a romper sus límites, vencer el miedo al éxito y desarrollar el potencial con el que fueron creadas para vivir una vida de impacto, influencia y legado.",
+      "Ha fundado y liderado múltiples empresas en Estados Unidos, combinando liderazgo, estrategia y desarrollo humano para ayudar a personas y organizaciones a crecer con propósito.",
       "Es autor de Sin Miedo al Éxito (2023) y SuperHumanos: Fuiste creado en SERIO, no en SERIE (2026). Su trabajo combina profundidad personal con aplicación práctica, y ha llevado su mensaje a audiencias en empresas, universidades y conferencias internacionales.",
     ],
   },

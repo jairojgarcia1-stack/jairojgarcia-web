@@ -1,10 +1,11 @@
 import type { HomeContent } from "@/lib/content/types";
 import { CONTACT_EMAIL } from "@/lib/constants";
 import { bookSlugs, staticRoutes } from "@/lib/i18n/slug-map";
+import { trajectoryItems } from "@/lib/content/en/trajectory-items";
 
 export const home: HomeContent = {
   hero: {
-    eyebrow: "Author · Speaker · Transformation Coach",
+    eyebrow: "Author · International Speaker · Executive Coach · Entrepreneur",
     headline: "You were made with purpose, not mass-produced.",
     subheadline:
       "You're not reading this by accident. Something in you already knows there's a version of yourself —braver, clearer, freer— that you haven't decided to live yet. This is where finding it begins.",
@@ -17,6 +18,20 @@ export const home: HomeContent = {
     { id: "stat-people", value: "100,000+", label: "People who decided to transform their lives" },
     { id: "stat-books", value: "2", label: "Books written to break the mold" },
   ],
+  action: {
+    heading: "In Action",
+    intro: "Stages, conversations, and real moments from a message that's already transforming lives.",
+    videoAlt: "Jairo J. García speaking live to an audience",
+    shots: [
+      { id: "action-1", alt: "Audience listening closely during a talk by Jairo J. García" },
+      { id: "action-2", alt: "Jairo J. García speaking into a microphone in front of the audience" },
+      { id: "action-3", alt: "Jairo J. García gesturing energetically while speaking" },
+      { id: "action-4", alt: "An attendee asking a question during a live session" },
+      { id: "action-5", alt: "Jairo J. García in conversation with another speaker on a panel" },
+      { id: "action-6", alt: "Jairo J. García signing copies of his book" },
+      { id: "action-7", alt: "Jairo J. García with attendees holding his book" },
+    ],
+  },
   about: {
     heading: "About Jairo",
     paragraphs: [
@@ -24,6 +39,9 @@ export const home: HomeContent = {
       "Through his books, talks, and coaching programs, he helps people name that fear, reconnect with their purpose, and build a life of real impact.",
     ],
     cta: { label: "Read my full story", href: "/en/about" },
+  },
+  purpose: {
+    text: "My purpose was born the day I understood something that changed everything: most people live far below the potential they were created with. Not for lack of talent, but because somewhere along the way they learned to settle, to hide, to postpone the life they actually wanted to live. I decided to dedicate my life to changing that — to help people remember who they are, overcome the fear that holds them back, and build something that outlasts them. Every book, every talk, and every coaching session is born from that same conviction: you were made with purpose, not mass-produced.",
   },
   philosophy: {
     heading: "Philosophy",
@@ -55,6 +73,11 @@ export const home: HomeContent = {
           "The goal isn't just hitting targets — it's becoming someone whose life leaves a mark on the people around them.",
       },
     ],
+  },
+  trajectory: {
+    heading: "A journey built with purpose",
+    intro: "The milestones that shaped the path to today.",
+    items: trajectoryItems,
   },
   speaking: {
     heading: "Talks that transform",

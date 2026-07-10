@@ -83,16 +83,30 @@ export interface HomeContent {
     secondaryCta: { label: string; href: string };
   };
   stats: StatItem[];
+  action: {
+    heading: string;
+    intro: string;
+    shots: { id: string; alt: string }[];
+    videoAlt: string;
+  };
   about: {
     heading: string;
     paragraphs: string[];
     cta: { label: string; href: string };
+  };
+  purpose: {
+    text: string;
   };
   philosophy: {
     heading: string;
     frameworkName: string;
     intro: string;
     pillars: PhilosophyPillar[];
+  };
+  trajectory: {
+    heading: string;
+    intro: string;
+    items: TimelineItem[];
   };
   speaking: {
     heading: string;

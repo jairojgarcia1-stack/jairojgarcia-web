@@ -2,16 +2,17 @@ import type { SiteContent } from "@/lib/content/types";
 
 export const site: SiteContent = {
   locale: "es",
-  tagline: "Autor, conferencista y coach de transformación personal",
+  tagline: "Autor, conferencista internacional, coach ejecutivo y empresario",
   metaDescription:
-    "Jairo J. García es autor, conferencista internacional y coach especializado en liderazgo, propósito, identidad y transformación personal. Descubre sus libros, conferencias y programas para vivir una vida de impacto y legado.",
+    "Jairo J. García es autor, conferencista internacional, coach ejecutivo y empresario, especializado en liderazgo, propósito, identidad y transformación personal. Descubre sus libros, conferencias y programas para vivir una vida de impacto y legado.",
   metaKeywords: [
     "Jairo J. García",
     "liderazgo con propósito",
     "miedo al éxito",
     "transformación personal",
-    "coach de identidad",
+    "coach ejecutivo",
     "conferencista internacional",
+    "empresario",
     "desarrollo personal",
     "SuperHumanos libro",
     "Sin Miedo al Éxito libro",
