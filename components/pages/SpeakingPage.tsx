@@ -77,7 +77,7 @@ export function SpeakingPage({
       <section className="border-t border-ink-800 py-20">
         <Container>
           <SectionHeading title={locale === "es" ? "Formatos" : "Formats"} />
-          <div className="mt-10 grid gap-6 sm:grid-cols-3">
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {speaking.formats.map((format, index) => (
               <AnimatedReveal key={format.id} delay={index * 0.08}>
                 <Card className="h-full">

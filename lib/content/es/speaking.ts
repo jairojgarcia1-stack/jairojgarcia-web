@@ -30,6 +30,12 @@ export const speaking: SpeakingContent = {
       description:
         "Cómo construir culturas de equipo que trasciendan resultados trimestrales y dejen un legado real en las personas.",
     },
+    {
+      id: "amor-consciente",
+      title: "Amor consciente",
+      description:
+        "Jairo es coach fundador de la Escuela de Amor Consciente, un espacio dedicado a construir relaciones más sanas, conscientes y con propósito.",
+    },
   ],
   formats: [
     {
@@ -46,6 +52,16 @@ export const speaking: SpeakingContent = {
       id: "universidad",
       title: "Charla universitaria",
       description: "Formato adaptado para audiencias jóvenes en universidades e instituciones educativas.",
+    },
+    {
+      id: "coaching-1a1",
+      title: "Coaching 1:1",
+      description: "Sesiones individuales de acompañamiento personalizado para un proceso de transformación más profundo.",
+    },
+    {
+      id: "coaching-grupal",
+      title: "Coaching grupal",
+      description: "Sesiones en grupo para equipos o comunidades que buscan crecer juntos con acompañamiento continuo.",
     },
   ],
   audience: [
@@ -71,12 +87,12 @@ export const speaking: SpeakingContent = {
     {
       question: "¿Qué formatos de conferencia ofrece?",
       answer:
-        "Conferencia magistral (keynote), talleres interactivos y charlas adaptadas para audiencias universitarias, según las necesidades del evento.",
+        "Conferencia magistral (keynote), talleres interactivos, charlas adaptadas para audiencias universitarias, y sesiones de coaching tanto 1:1 como grupales, según las necesidades del evento.",
     },
     {
       question: "¿Cuáles son los temas principales de sus conferencias?",
       answer:
-        "Liderazgo con propósito, miedo al éxito, identidad y transformación personal, y cultura organizacional y legado.",
+        "Liderazgo con propósito, miedo al éxito, identidad y transformación personal, cultura organizacional y legado, y amor consciente.",
     },
   ],
 };

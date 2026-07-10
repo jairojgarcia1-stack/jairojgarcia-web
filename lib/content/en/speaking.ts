@@ -28,6 +28,12 @@ export const speaking: SpeakingContent = {
       title: "Organizational culture and legacy",
       description: "How to build team cultures that outlast quarterly results and leave a real legacy in people.",
     },
+    {
+      id: "conscious-love",
+      title: "Conscious love",
+      description:
+        "Jairo is the founder coach of the Conscious Love School, a space dedicated to building healthier, more conscious, purpose-driven relationships.",
+    },
   ],
   formats: [
     {
@@ -44,6 +50,16 @@ export const speaking: SpeakingContent = {
       id: "university",
       title: "University talk",
       description: "A format adapted for younger audiences at universities and educational institutions.",
+    },
+    {
+      id: "coaching-1a1",
+      title: "1:1 Coaching",
+      description: "Individual coaching sessions for a deeper, personalized transformation process.",
+    },
+    {
+      id: "coaching-group",
+      title: "Group Coaching",
+      description: "Group sessions for teams or communities that want to grow together with ongoing guidance.",
     },
   ],
   audience: [
@@ -68,11 +84,13 @@ export const speaking: SpeakingContent = {
     },
     {
       question: "What speaking formats are available?",
-      answer: "Keynotes, interactive workshops, and talks adapted for university audiences, depending on your event's needs.",
+      answer:
+        "Keynotes, interactive workshops, talks adapted for university audiences, and both 1:1 and group coaching sessions, depending on your event's needs.",
     },
     {
       question: "What are his main speaking topics?",
-      answer: "Purpose-driven leadership, fear of success, identity and personal transformation, and organizational culture and legacy.",
+      answer:
+        "Purpose-driven leadership, fear of success, identity and personal transformation, organizational culture and legacy, and conscious love.",
     },
   ],
 };
