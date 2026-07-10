@@ -22,11 +22,25 @@ export function Button({
   variant?: Variant;
   className?: string;
 }) {
-  const isExternal = href.startsWith("http") || href.startsWith("mailto:");
+  const isHttp = href.startsWith("http");
+  const isMailto = href.startsWith("mailto:");
   const base =
     "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition-colors duration-200";
 
-  if (isExternal) {
+  if (isHttp) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`${base} ${variantClasses[variant]} ${className}`}
+      >
+        {children}
+      </a>
+    );
+  }
+
+  if (isMailto) {
     return (
       <a href={href} className={`${base} ${variantClasses[variant]} ${className}`}>
         {children}

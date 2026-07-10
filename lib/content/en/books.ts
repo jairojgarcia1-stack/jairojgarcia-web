@@ -1,11 +1,13 @@
 import type { Book, BooksContent } from "@/lib/content/types";
 import { bookSlugs, staticRoutes } from "@/lib/i18n/slug-map";
-import { CONTACT_EMAIL } from "@/lib/constants";
 import { MEDIA } from "@/lib/media";
 
-function purchaseHref(title: string) {
-  return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(`I want to buy ${title}`)}`;
-}
+// Both books are currently only published in Spanish, so the EN site
+// links out to the same Amazon (Spanish-language) editions.
+const AMAZON_LINKS = {
+  superhumanos: "https://www.amazon.com/dp/B0H3539JJY",
+  "sin-miedo-al-exito": "https://www.amazon.com/dp/B0DXCPDYC6",
+};
 
 export const booksContent: BooksContent = {
   heading: "Books",
@@ -36,7 +38,7 @@ export const books: Book[] = [
     },
     links: {
       purchaseLabel: "Buy",
-      purchaseHref: purchaseHref("SuperHumans"),
+      purchaseHref: AMAZON_LINKS.superhumanos,
       sampleLabel: "Read a sample",
       sampleHref: `${staticRoutes.books.en}/${bookSlugs.superhumanos.en}#excerpt`,
     },
@@ -53,7 +55,7 @@ export const books: Book[] = [
       },
       {
         question: "When is SuperHumans being released?",
-        answer: "SuperHumans is releasing in 2026. Reach out to be notified when it launches.",
+        answer: "SuperHumans is already available as an ebook on Amazon, with the full release coming in 2026.",
       },
     ],
   },
@@ -79,7 +81,7 @@ export const books: Book[] = [
     },
     links: {
       purchaseLabel: "Buy",
-      purchaseHref: purchaseHref("No Fear of Success"),
+      purchaseHref: AMAZON_LINKS["sin-miedo-al-exito"],
       sampleLabel: "Read a sample",
       sampleHref: `${staticRoutes.books.en}/${bookSlugs["sin-miedo-al-exito"].en}#excerpt`,
     },

@@ -1,11 +1,11 @@
 import type { Book, BooksContent } from "@/lib/content/types";
 import { bookSlugs, staticRoutes } from "@/lib/i18n/slug-map";
-import { CONTACT_EMAIL } from "@/lib/constants";
 import { MEDIA } from "@/lib/media";
 
-function purchaseHref(title: string) {
-  return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(`Quiero comprar ${title}`)}`;
-}
+const AMAZON_LINKS = {
+  superhumanos: "https://www.amazon.com/dp/B0H3539JJY",
+  "sin-miedo-al-exito": "https://www.amazon.com/dp/B0DXCPDYC6",
+};
 
 export const booksContent: BooksContent = {
   heading: "Libros",
@@ -36,7 +36,7 @@ export const books: Book[] = [
     },
     links: {
       purchaseLabel: "Comprar",
-      purchaseHref: purchaseHref("SuperHumanos"),
+      purchaseHref: AMAZON_LINKS.superhumanos,
       sampleLabel: "Leer muestra",
       sampleHref: `${staticRoutes.books.es}/${bookSlugs.superhumanos.es}#extracto`,
     },
@@ -53,7 +53,7 @@ export const books: Book[] = [
       },
       {
         question: "¿Cuándo se publica SuperHumanos?",
-        answer: "SuperHumanos se publica en 2026. Escríbenos para recibir novedades sobre el lanzamiento.",
+        answer: "SuperHumanos ya está disponible en versión digital (ebook) en Amazon, con lanzamiento completo en 2026.",
       },
     ],
   },
@@ -79,7 +79,7 @@ export const books: Book[] = [
     },
     links: {
       purchaseLabel: "Comprar",
-      purchaseHref: purchaseHref("Sin Miedo al Éxito"),
+      purchaseHref: AMAZON_LINKS["sin-miedo-al-exito"],
       sampleLabel: "Leer muestra",
       sampleHref: `${staticRoutes.books.es}/${bookSlugs["sin-miedo-al-exito"].es}#extracto`,
     },

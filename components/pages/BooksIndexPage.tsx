@@ -59,7 +59,12 @@ export function BooksIndexPage({
                     <h2 className="mt-1 font-display text-2xl font-semibold text-cream-50">{book.title}</h2>
                     <p className="mt-3 text-cream-400">{book.shortDescription}</p>
                     <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
-                      <a href={book.links.purchaseHref} className="font-medium text-gold-300 hover:text-gold-200">
+                      <a
+                        href={book.links.purchaseHref}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-medium text-gold-300 hover:text-gold-200"
+                      >
                         {book.links.purchaseLabel}
                       </a>
                       <Link href={book.links.sampleHref} className="text-cream-300 hover:text-gold-300">
