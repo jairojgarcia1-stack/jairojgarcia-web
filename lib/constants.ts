@@ -12,7 +12,7 @@ export const SITE_NAME = {
 export const SOCIAL_LINKS = {
   instagram: "https://instagram.com/jairojgarcia",
   youtube: "https://youtube.com/@jairojgarcia",
-  tiktok: "https://tiktok.com/@jairojgarcia",
+  tiktok: "https://www.tiktok.com/@jairojgarciaoficial",
   linkedin: "https://linkedin.com/in/jairojgarcia",
   facebook: "https://facebook.com/jairojgarcia",
 } as const;
