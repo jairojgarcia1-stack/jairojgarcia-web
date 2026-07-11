@@ -11,9 +11,9 @@ export const SITE_NAME = {
 
 export const SOCIAL_LINKS = {
   instagram: "https://instagram.com/jairojgarcia",
-  youtube: "https://youtube.com/@jairojgarcia",
+  youtube: "https://www.youtube.com/channel/UCqE1iXANmz5zLgvpYkRukWQ",
   tiktok: "https://www.tiktok.com/@jairojgarciaoficial",
-  linkedin: "https://linkedin.com/in/jairojgarcia",
+  linkedin: "https://www.linkedin.com/in/jairo-j-garc%C3%ADa-8927395a/",
   facebook: "https://facebook.com/jairojgarcia",
 } as const;
 
