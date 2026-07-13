@@ -24,7 +24,10 @@ export const home: HomeContent = {
       "Escenarios, conversaciones y momentos reales de un mensaje que ya está transformando vidas.",
     videoAlt: "Jairo J. García hablando en vivo frente a una audiencia",
     shots: [
-      { id: "action-1", alt: "Audiencia atenta durante una conferencia de Jairo J. García" },
+      {
+        id: "action-1",
+        alt: "Jairo J. García sosteniendo su libro Sin Miedo al Éxito frente a un auditorio lleno de cientos de asistentes",
+      },
       { id: "action-2", alt: "Jairo J. García hablando con micrófono frente al público" },
       { id: "action-3", alt: "Jairo J. García gesticulando con energía durante una charla" },
       { id: "action-4", alt: "Asistente haciendo una pregunta durante una sesión en vivo" },

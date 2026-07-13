@@ -23,7 +23,10 @@ export const home: HomeContent = {
     intro: "Stages, conversations, and real moments from a message that's already transforming lives.",
     videoAlt: "Jairo J. García speaking live to an audience",
     shots: [
-      { id: "action-1", alt: "Audience listening closely during a talk by Jairo J. García" },
+      {
+        id: "action-1",
+        alt: "Jairo J. García holding his book No Fear of Success in front of a packed auditorium of hundreds of attendees",
+      },
       { id: "action-2", alt: "Jairo J. García speaking into a microphone in front of the audience" },
       { id: "action-3", alt: "Jairo J. García gesturing energetically while speaking" },
       { id: "action-4", alt: "An attendee asking a question during a live session" },

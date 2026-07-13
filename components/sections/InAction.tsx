@@ -21,13 +21,17 @@ export function InAction({ action }: { action: HomeContent["action"] }) {
             <AnimatedReveal
               key={shot.id}
               delay={Math.min(index * 0.06, 0.3)}
-              className={index === 0 ? "col-span-2 aspect-video sm:aspect-auto" : "aspect-square sm:aspect-auto"}
+              className={
+                index === 0
+                  ? "col-span-2 aspect-[3/4] sm:col-span-1 sm:row-span-2 sm:aspect-auto"
+                  : "aspect-square sm:aspect-auto"
+              }
             >
               <CollageTile
                 src={MEDIA.actionShots[index]}
                 alt={shot.alt}
                 className="h-full w-full"
-                sizes={index === 0 ? "(min-width: 640px) 50vw, 100vw" : "(min-width: 640px) 25vw, 50vw"}
+                sizes={index === 0 ? "(min-width: 640px) 25vw, 100vw" : "(min-width: 640px) 25vw, 50vw"}
               />
             </AnimatedReveal>
           ))}

@@ -8,6 +8,7 @@ import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { VideoReel } from "@/components/ui/VideoReel";
+import { EditorialPhoto } from "@/components/ui/EditorialPhoto";
 import { StatCounter } from "@/components/ui/StatCounter";
 import { SpeakingInquiryForm } from "@/components/forms/SpeakingInquiryForm";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -62,8 +63,21 @@ export function SpeakingPage({
       </section>
 
       <section className="border-b border-ink-800 bg-ink-900/40 py-14">
-        <Container>
+        <Container className="grid gap-10 sm:grid-cols-[0.8fr_1.2fr] sm:items-center">
           <AnimatedReveal>
+            <div className="relative mx-auto aspect-[3/4] w-full max-w-xs overflow-hidden rounded-2xl border border-gold-400/25">
+              <EditorialPhoto
+                src={MEDIA.actionShots[0]}
+                alt={
+                  locale === "es"
+                    ? "Jairo J. García frente a un auditorio lleno de cientos de asistentes"
+                    : "Jairo J. García in front of a packed auditorium of hundreds of attendees"
+                }
+                sizes="(min-width: 640px) 25vw, 80vw"
+              />
+            </div>
+          </AnimatedReveal>
+          <AnimatedReveal delay={0.1}>
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
               {speaking.trustStats.map((stat) => (
                 <StatCounter key={stat.id} value={stat.value} label={stat.label} locale={locale} />
