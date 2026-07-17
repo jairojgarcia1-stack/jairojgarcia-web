@@ -6,11 +6,11 @@ import { AnimatedReveal } from "@/components/ui/AnimatedReveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
-import { Button } from "@/components/ui/Button";
 import { VideoReel } from "@/components/ui/VideoReel";
 import { EditorialPhoto } from "@/components/ui/EditorialPhoto";
 import { StatCounter } from "@/components/ui/StatCounter";
 import { SpeakingInquiryForm } from "@/components/forms/SpeakingInquiryForm";
+import { TrackedButton } from "@/components/analytics/TrackedButton";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { breadcrumbSchema, faqPageSchema, webPageSchema } from "@/lib/seo/jsonld";
 import { staticRoutes } from "@/lib/i18n/slug-map";
@@ -55,9 +55,14 @@ export function SpeakingPage({
           <AnimatedReveal>
             <h1 className="max-w-2xl text-4xl font-semibold text-cream-50 sm:text-5xl">{speaking.heading}</h1>
             <p className="mt-4 max-w-2xl text-lg text-cream-200">{speaking.intro}</p>
-            <Button href="#solicitar" className="mt-8">
+            <TrackedButton
+              href="#solicitar"
+              className="mt-8"
+              eventName="Schedule"
+              eventParams={{ content_name: speaking.cta.label }}
+            >
               {speaking.cta.label}
-            </Button>
+            </TrackedButton>
           </AnimatedReveal>
         </Container>
       </section>

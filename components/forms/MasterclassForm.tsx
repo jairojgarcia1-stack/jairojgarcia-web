@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import type { Locale } from "@/lib/content/types";
+import { trackEvent } from "@/lib/pixel";
 
 type Status = "idle" | "loading" | "success" | "error";
 
@@ -38,6 +39,9 @@ export function MasterclassForm({ locale }: { locale: Locale }) {
       });
       const data = await response.json();
       setStatus(data.ok ? "success" : "error");
+      if (data.ok) {
+        trackEvent("Lead", { content_name: "Masterclass Gratuita" });
+      }
     } catch {
       setStatus("error");
     }

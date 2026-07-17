@@ -2,6 +2,7 @@
 
 import { useState, type ChangeEvent, type FormEvent } from "react";
 import { CONTACT_EMAIL } from "@/lib/constants";
+import { trackEvent } from "@/lib/pixel";
 import type { SpeakingContent } from "@/lib/content/types";
 
 const inputClasses =
@@ -41,6 +42,7 @@ export function SpeakingInquiryForm({ form }: { form: SpeakingContent["inquiryFo
 
     window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     setSubmitted(true);
+    trackEvent("Contact", { content_name: "Solicitud de Conferencia" });
   }
 
   return (

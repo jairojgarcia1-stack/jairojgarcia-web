@@ -5,6 +5,7 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { AnimatedReveal } from "@/components/ui/AnimatedReveal";
 import { BookCover } from "@/components/ui/BookCover";
 import { TiltCard } from "@/components/ui/TiltCard";
+import { TrackedLink } from "@/components/analytics/TrackedLink";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { breadcrumbSchema, webPageSchema } from "@/lib/seo/jsonld";
 import { staticRoutes } from "@/lib/i18n/slug-map";
@@ -59,14 +60,14 @@ export function BooksIndexPage({
                     <h2 className="mt-1 font-display text-2xl font-semibold text-cream-50">{book.title}</h2>
                     <p className="mt-3 text-cream-400">{book.shortDescription}</p>
                     <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
-                      <a
+                      <TrackedLink
                         href={book.links.purchaseHref}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        eventName="InitiateCheckout"
+                        eventParams={{ content_name: book.title }}
                         className="font-medium text-gold-300 hover:text-gold-200"
                       >
                         {book.links.purchaseLabel}
-                      </a>
+                      </TrackedLink>
                       <Link href={book.links.sampleHref} className="text-cream-300 hover:text-gold-300">
                         {book.links.sampleLabel}
                       </Link>

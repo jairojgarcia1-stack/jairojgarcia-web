@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import type { ReactNode } from "react";
 
@@ -16,11 +18,13 @@ export function Button({
   children,
   variant = "primary",
   className = "",
+  onClick,
 }: {
   href: string;
   children: ReactNode;
   variant?: Variant;
   className?: string;
+  onClick?: () => void;
 }) {
   const isHttp = href.startsWith("http");
   const isMailto = href.startsWith("mailto:");
@@ -33,6 +37,7 @@ export function Button({
         href={href}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={onClick}
         className={`${base} ${variantClasses[variant]} ${className}`}
       >
         {children}
@@ -42,14 +47,14 @@ export function Button({
 
   if (isMailto) {
     return (
-      <a href={href} className={`${base} ${variantClasses[variant]} ${className}`}>
+      <a href={href} onClick={onClick} className={`${base} ${variantClasses[variant]} ${className}`}>
         {children}
       </a>
     );
   }
 
   return (
-    <Link href={href} className={`${base} ${variantClasses[variant]} ${className}`}>
+    <Link href={href} onClick={onClick} className={`${base} ${variantClasses[variant]} ${className}`}>
       {children}
     </Link>
   );

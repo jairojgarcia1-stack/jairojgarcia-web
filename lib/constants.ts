@@ -18,3 +18,5 @@ export const SOCIAL_LINKS = {
 } as const;
 
 export const CONTACT_EMAIL = "contacto@jairojgarcia.com";
+
+export const META_PIXEL_ID = "2052263055390131";

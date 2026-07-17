@@ -5,6 +5,7 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { EditorialPhoto } from "@/components/ui/EditorialPhoto";
 import { MEDIA } from "@/lib/media";
+import { trackEvent } from "@/lib/pixel";
 import type { HomeContent } from "@/lib/content/types";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
@@ -49,7 +50,11 @@ export function Hero({ hero }: { hero: HomeContent["hero"] }) {
             className="mt-10 flex flex-wrap items-center gap-4"
           >
             <Button href={hero.primaryCta.href}>{hero.primaryCta.label}</Button>
-            <Button href={hero.secondaryCta.href} variant="secondary">
+            <Button
+              href={hero.secondaryCta.href}
+              variant="secondary"
+              onClick={() => trackEvent("Schedule", { content_name: hero.secondaryCta.label })}
+            >
               {hero.secondaryCta.label}
             </Button>
           </motion.div>

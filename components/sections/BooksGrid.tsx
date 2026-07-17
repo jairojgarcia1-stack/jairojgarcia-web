@@ -4,6 +4,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { AnimatedReveal } from "@/components/ui/AnimatedReveal";
 import { BookCover } from "@/components/ui/BookCover";
 import { TiltCard } from "@/components/ui/TiltCard";
+import { TrackedLink } from "@/components/analytics/TrackedLink";
 import type { Book } from "@/lib/content/types";
 
 export function BooksGrid({
@@ -36,14 +37,14 @@ export function BooksGrid({
                 <p className="mt-5 font-display text-lg font-semibold text-cream-50">{book.title}</p>
                 <p className="mt-1 text-sm text-cream-400">{book.year}</p>
                 <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
-                  <a
+                  <TrackedLink
                     href={book.links.purchaseHref}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    eventName="InitiateCheckout"
+                    eventParams={{ content_name: book.title }}
                     className="font-medium text-gold-300 hover:text-gold-200"
                   >
                     {book.links.purchaseLabel}
-                  </a>
+                  </TrackedLink>
                   <Link href={book.links.sampleHref} className="text-cream-300 hover:text-gold-300">
                     {book.links.sampleLabel}
                   </Link>

@@ -7,6 +7,7 @@ import { TiltCard } from "@/components/ui/TiltCard";
 import { TrailerVideo } from "@/components/ui/TrailerVideo";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
+import { TrackedButton } from "@/components/analytics/TrackedButton";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { bookSchema, breadcrumbSchema, faqPageSchema, webPageSchema } from "@/lib/seo/jsonld";
 import { staticRoutes } from "@/lib/i18n/slug-map";
@@ -62,7 +63,13 @@ export function BookDetailPage({
             </div>
 
             <div className="mt-8 flex flex-wrap gap-4">
-              <Button href={book.links.purchaseHref}>{book.links.purchaseLabel}</Button>
+              <TrackedButton
+                href={book.links.purchaseHref}
+                eventName="InitiateCheckout"
+                eventParams={{ content_name: book.title }}
+              >
+                {book.links.purchaseLabel}
+              </TrackedButton>
               <Button href={book.links.sampleHref} variant="secondary">
                 {book.links.sampleLabel}
               </Button>
