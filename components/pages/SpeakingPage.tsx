@@ -137,7 +137,7 @@ export function SpeakingPage({
 
       <section id="solicitar" className="scroll-mt-24 border-t border-ink-800 py-20">
         <Container className="max-w-2xl">
-          <SpeakingInquiryForm form={speaking.inquiryForm} />
+          <SpeakingInquiryForm form={speaking.inquiryForm} locale={locale} />
           <p className="mt-6 text-center text-sm text-cream-400">
             <Link href={staticRoutes.press[locale]} className="text-gold-300 hover:text-gold-200">
               {speaking.pressKitLabel}
