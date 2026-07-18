@@ -4,8 +4,7 @@ import { CONTACT_EMAIL } from "@/lib/constants";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const MIN_FILL_TIME_MS = 3000;
-const FROM_NOTIFICATIONS = "Solicitudes — Jairo J. García <notificaciones@jairojgarcia.com>";
-const FROM_CONFIRMATION = "Jairo J. García <contacto@jairojgarcia.com>";
+const FROM_ADDRESS = "Jairo J. Garcia Web <formularios@mail.jairojgarcia.com>";
 
 const CONFIRMATION_COPY = {
   es: {
@@ -111,7 +110,7 @@ export async function POST(request: Request) {
   ];
 
   const internalResult = await resend.emails.send({
-    from: FROM_NOTIFICATIONS,
+    from: FROM_ADDRESS,
     to: CONTACT_EMAIL,
     replyTo: email,
     subject: `Nueva solicitud de conferencia — ${company || name}`,
@@ -131,7 +130,7 @@ export async function POST(request: Request) {
   ];
 
   await resend.emails.send({
-    from: FROM_CONFIRMATION,
+    from: FROM_ADDRESS,
     to: email,
     replyTo: CONTACT_EMAIL,
     subject: copy.subject,
