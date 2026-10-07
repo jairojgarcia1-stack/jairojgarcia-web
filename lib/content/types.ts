@@ -159,6 +159,11 @@ export interface AboutContent {
   heading: string;
   intro: string[];
   story: string[];
+  foundation: {
+    heading: string;
+    description: string;
+    areas: string[];
+  };
   values: {
     heading: string;
     items: ValueItem[];

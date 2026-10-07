@@ -14,6 +14,12 @@ export const about: AboutContent = {
     "Creo profundamente que la transformación real no ocurre en un escenario ni en la última página de un libro, sino en las decisiones diarias que alguien toma cuando nadie más está mirando. Por eso todo lo que comparto — ya sea desde una conferencia corporativa o desde un programa de coaching 1:1 — busca ser aplicable, honesto y sostenible en el tiempo.",
     "Hoy sigo en el mismo camino que invito a recorrer a otros: vivir con propósito, liderar con identidad y construir un legado que trascienda cualquier logro individual.",
   ],
+  foundation: {
+    heading: "Fundación La Vida es Mejor en Familia",
+    description:
+      "Un espacio dedicado a fortalecer matrimonios y familias a través de consejería, coaching, capacitación y formación de liderazgo, con la convicción de que la vida es mejor en familia.",
+    areas: ["Consejería", "Coaching", "Capacitación", "Formación de liderazgo"],
+  },
   values: {
     heading: "Valores que guían mi trabajo",
     items: [
