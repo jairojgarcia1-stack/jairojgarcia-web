@@ -39,7 +39,7 @@ export const speaking: SpeakingContent = {
       id: "amor-consciente",
       title: "Amor consciente",
       description:
-        "Jairo es coach fundador de la Escuela de Amor Consciente, un espacio dedicado a construir relaciones más sanas, conscientes y con propósito.",
+        "Jairo es Master Fundador de la Escuela de Amor Consciente, un espacio dedicado a construir relaciones más sanas, conscientes y con propósito.",
     },
   ],
   formats: [

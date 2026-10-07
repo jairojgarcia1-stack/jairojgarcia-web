@@ -39,7 +39,7 @@ export const home: HomeContent = {
   community: {
     heading: "Una comunidad que se certifica y se transforma",
     intro:
-      "Más allá del escenario: grupos de graduados de la Escuela de Amor Consciente, fundada por Jairo, celebrando su certificación en coaching.",
+      "Más allá del escenario: Jairo J. García, Master Fundador de la Escuela de Amor Consciente, junto a sus graduados celebrando su certificación en coaching.",
     photos: [
       {
         id: "escuela",

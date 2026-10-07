@@ -37,7 +37,7 @@ export const speaking: SpeakingContent = {
       id: "conscious-love",
       title: "Conscious love",
       description:
-        "Jairo is the founder coach of the Conscious Love School, a space dedicated to building healthier, more conscious, purpose-driven relationships.",
+        "Jairo is the Founding Master of the Conscious Love School, a space dedicated to building healthier, more conscious, purpose-driven relationships.",
     },
   ],
   formats: [

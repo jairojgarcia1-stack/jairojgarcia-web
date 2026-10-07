@@ -38,7 +38,7 @@ export const home: HomeContent = {
   community: {
     heading: "A community that certifies and transforms",
     intro:
-      "Beyond the stage: graduating classes of the Conscious Love School, founded by Jairo, celebrating their coaching certification.",
+      "Beyond the stage: Jairo J. García, Founding Master of the Conscious Love School, alongside his graduates celebrating their coaching certification.",
     photos: [
       {
         id: "escuela",
