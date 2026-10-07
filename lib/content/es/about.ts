@@ -6,7 +6,7 @@ export const about: AboutContent = {
   intro: [
     "Soy autor, conferencista internacional, coach ejecutivo y empresario, especializado en liderazgo, propósito, identidad y transformación personal.",
     "Ayudo a las personas a romper sus límites, vencer el miedo al éxito y desarrollar el potencial con el que fueron creadas para vivir una vida de impacto, influencia y legado.",
-    "He fundado y liderado múltiples empresas en Estados Unidos, combinando liderazgo, estrategia y desarrollo humano para ayudar a personas y organizaciones a crecer con propósito.",
+    "He fundado y liderado múltiples empresas en Estados Unidos, combinando liderazgo, estrategia y desarrollo humano para ayudar a personas y organizaciones a crecer con propósito. También soy fundador de la fundación La Vida es Mejor en Familia.",
   ],
   story: [
     "Todo lo que enseño nace de una convicción que se fue construyendo con el tiempo: la mayoría de las personas no viven por debajo de su potencial por falta de capacidad, sino por una identidad prestada, un propósito difuso y un miedo que rara vez se nombra en voz alta — el miedo al éxito.",

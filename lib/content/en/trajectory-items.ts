@@ -16,8 +16,9 @@ export const trajectoryItems: TimelineItem[] = [
   {
     id: "companies",
     year: "",
-    title: "Founds multiple companies",
-    description: "Founds and leads multiple companies, combining strategy and human development.",
+    title: "Companies and foundation",
+    description:
+      "Founds and leads multiple companies, as well as the foundation La Vida es Mejor en Familia, combining strategy and human development.",
   },
   {
     id: "international-speaking",

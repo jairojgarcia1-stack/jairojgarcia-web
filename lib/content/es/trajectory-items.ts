@@ -16,8 +16,9 @@ export const trajectoryItems: TimelineItem[] = [
   {
     id: "empresas",
     year: "",
-    title: "Fundación de empresas",
-    description: "Funda y lidera múltiples empresas, combinando estrategia y desarrollo humano.",
+    title: "Empresas y fundación",
+    description:
+      "Funda y lidera múltiples empresas, además de la fundación La Vida es Mejor en Familia, combinando estrategia y desarrollo humano.",
   },
   {
     id: "conferencias-internacionales",

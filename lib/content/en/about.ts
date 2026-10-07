@@ -6,7 +6,7 @@ export const about: AboutContent = {
   intro: [
     "I'm an author, international speaker, executive coach, and entrepreneur specializing in leadership, purpose, identity, and personal transformation.",
     "I help people break through their limits, overcome the fear of success, and develop the potential they were created for — living a life of impact, influence, and legacy.",
-    "I've founded and led multiple companies in the United States, combining leadership, strategy, and human development to help people and organizations grow with purpose.",
+    "I've founded and led multiple companies in the United States, combining leadership, strategy, and human development to help people and organizations grow with purpose. I'm also the founder of the foundation La Vida es Mejor en Familia.",
   ],
   story: [
     "Everything I teach comes from a conviction that built up over time: most people don't live below their potential because they lack ability, but because of a borrowed identity, a blurry sense of purpose, and a fear that's rarely named out loud — the fear of success.",
