@@ -8,6 +8,7 @@ import { Philosophy } from "@/components/sections/Philosophy";
 import { Trajectory } from "@/components/sections/Trajectory";
 import { Speaking } from "@/components/sections/Speaking";
 import { BooksGrid } from "@/components/sections/BooksGrid";
+import { Community } from "@/components/sections/Community";
 import { Ecosystem } from "@/components/sections/Ecosystem";
 import { SocialProof } from "@/components/sections/SocialProof";
 import { LogosStrip } from "@/components/sections/LogosStrip";
@@ -63,6 +64,7 @@ export function HomePage({
         basePath={staticRoutes.books[locale]}
         moreInfoLabel={locale === "es" ? "Más información" : "More info"}
       />
+      <Community community={home.community} />
       <Ecosystem ecosystem={home.ecosystem} locale={locale} />
       <SocialProof socialProof={home.socialProof} locale={locale} />
       <LogosStrip locale={locale} />

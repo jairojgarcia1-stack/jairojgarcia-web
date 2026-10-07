@@ -135,6 +135,29 @@ export function SpeakingPage({
         </Container>
       </section>
 
+      <section className="border-t border-ink-800 py-20">
+        <Container className="max-w-3xl">
+          <SectionHeading title={locale === "es" ? "En escenario" : "On stage"} />
+          <div className="mt-10 grid grid-cols-2 gap-4">
+            {MEDIA.stageShots.map((src, index) => (
+              <AnimatedReveal key={src} delay={index * 0.08}>
+                <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-gold-400/25">
+                  <EditorialPhoto
+                    src={src}
+                    alt={
+                      locale === "es"
+                        ? "Jairo J. García durante una conferencia, con micrófono de diadema, frente a un fondo con la palabra Superhumanos"
+                        : "Jairo J. García during a keynote, wearing a headset microphone, in front of a Superhumanos backdrop"
+                    }
+                    sizes="(min-width: 768px) 384px, 50vw"
+                  />
+                </div>
+              </AnimatedReveal>
+            ))}
+          </div>
+        </Container>
+      </section>
+
       <section id="solicitar" className="scroll-mt-24 border-t border-ink-800 py-20">
         <Container className="max-w-2xl">
           <SpeakingInquiryForm form={speaking.inquiryForm} locale={locale} />

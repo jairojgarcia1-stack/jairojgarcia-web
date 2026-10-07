@@ -11,6 +11,14 @@ export const MEDIA = {
     "/media/action-6.jpg",
     "/media/action-7.jpg",
   ],
+  community: {
+    escuela: "/media/community-escuela.jpg",
+    eventoGrande: "/media/community-evento-grande.jpg",
+    hogar: "/media/community-hogar.jpg",
+    certificacion: "/media/community-certificacion.jpg",
+    corazones: "/media/community-corazones.jpg",
+  },
+  stageShots: ["/media/stage-1.jpg", "/media/stage-2.jpg"],
   bookCovers: {
     superhumanos: "/media/cover-superhumanos.png",
     "sin-miedo-al-exito": "/media/cover-sin-miedo-al-exito.jpg",

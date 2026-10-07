@@ -5,11 +5,13 @@ export function CollageTile({
   alt,
   className = "",
   sizes = "(min-width: 640px) 25vw, 50vw",
+  imageClassName = "",
 }: {
   src: string;
   alt: string;
   className?: string;
   sizes?: string;
+  imageClassName?: string;
 }) {
   return (
     <div className={`group relative overflow-hidden rounded-xl border border-ink-700 ${className}`}>
@@ -17,7 +19,7 @@ export function CollageTile({
         src={src}
         alt={alt}
         sizes={sizes}
-        className="transition-transform duration-700 ease-out group-hover:scale-110"
+        className={`transition-transform duration-700 ease-out group-hover:scale-110 ${imageClassName}`}
       />
       <div
         aria-hidden

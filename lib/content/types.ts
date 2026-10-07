@@ -94,6 +94,11 @@ export interface HomeContent {
     paragraphs: string[];
     cta: { label: string; href: string };
   };
+  community: {
+    heading: string;
+    intro: string;
+    photos: { id: string; alt: string }[];
+  };
   purpose: {
     text: string;
   };

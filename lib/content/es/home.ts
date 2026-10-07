@@ -36,6 +36,33 @@ export const home: HomeContent = {
       { id: "action-7", alt: "Jairo J. García junto a asistentes que sostienen su libro" },
     ],
   },
+  community: {
+    heading: "Una comunidad que se certifica y se transforma",
+    intro:
+      "Más allá del escenario: grupos de graduados de la Escuela de Amor Consciente, fundada por Jairo, celebrando su certificación en coaching.",
+    photos: [
+      {
+        id: "escuela",
+        alt: "Jairo J. García con un grupo de graduados sosteniendo sus certificados frente al banner de la Escuela de Amor Consciente",
+      },
+      {
+        id: "evento-grande",
+        alt: "Un salón completo de graduados sosteniendo sus certificados de la certificación en coaching",
+      },
+      {
+        id: "hogar",
+        alt: "Numeroso grupo de participantes vestidos de blanco reunidos en un encuentro de la comunidad",
+      },
+      {
+        id: "certificacion",
+        alt: "Jairo J. García con graduados de la certificación en Coaching Amor Consciente mostrando sus certificados",
+      },
+      {
+        id: "corazones",
+        alt: "Jairo J. García y los participantes de un encuentro formando juntos un corazón con las manos",
+      },
+    ],
+  },
   about: {
     heading: "Sobre Jairo",
     paragraphs: [

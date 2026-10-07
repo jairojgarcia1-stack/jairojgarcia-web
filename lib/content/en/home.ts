@@ -35,6 +35,33 @@ export const home: HomeContent = {
       { id: "action-7", alt: "Jairo J. García with attendees holding his book" },
     ],
   },
+  community: {
+    heading: "A community that certifies and transforms",
+    intro:
+      "Beyond the stage: graduating classes of the Conscious Love School, founded by Jairo, celebrating their coaching certification.",
+    photos: [
+      {
+        id: "escuela",
+        alt: "Jairo J. García with a group of graduates holding their certificates in front of the Conscious Love School banner",
+      },
+      {
+        id: "evento-grande",
+        alt: "A full room of graduates holding their coaching certification certificates",
+      },
+      {
+        id: "hogar",
+        alt: "A large group of participants dressed in white gathered at a community meetup",
+      },
+      {
+        id: "certificacion",
+        alt: "Jairo J. García with graduates of the Conscious Love Coaching certification showing their certificates",
+      },
+      {
+        id: "corazones",
+        alt: "Jairo J. García and event participants making a heart shape together with their hands",
+      },
+    ],
+  },
   about: {
     heading: "About Jairo",
     paragraphs: [
