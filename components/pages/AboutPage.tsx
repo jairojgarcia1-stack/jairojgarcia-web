@@ -4,7 +4,6 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { AnimatedReveal } from "@/components/ui/AnimatedReveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Card } from "@/components/ui/Card";
-import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { EditorialPhoto } from "@/components/ui/EditorialPhoto";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -71,19 +70,6 @@ export function AboutPage({
                 <p key={index} className="text-lg leading-relaxed text-cream-400">
                   {paragraph}
                 </p>
-              ))}
-            </div>
-          </AnimatedReveal>
-        </Container>
-      </section>
-
-      <section className="border-t border-ink-800 py-16">
-        <Container className="max-w-3xl">
-          <AnimatedReveal>
-            <SectionHeading title={about.foundation.heading} intro={about.foundation.description} />
-            <div className="mt-6 flex flex-wrap gap-3">
-              {about.foundation.areas.map((area) => (
-                <Badge key={area}>{area}</Badge>
               ))}
             </div>
           </AnimatedReveal>

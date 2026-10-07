@@ -14,12 +14,6 @@ export const about: AboutContent = {
     "I believe deeply that real transformation doesn't happen on a stage or on the last page of a book — it happens in the daily decisions someone makes when no one else is watching. That's why everything I share, whether from a corporate keynote or a 1:1 coaching program, aims to be applicable, honest, and sustainable over time.",
     "Today I'm still walking the same path I invite others to walk: living with purpose, leading from identity, and building a legacy that outlasts any single achievement.",
   ],
-  foundation: {
-    heading: "La Vida es Mejor en Familia Foundation",
-    description:
-      "A space dedicated to strengthening marriages and families through counseling, coaching, training, and leadership development, grounded in the conviction that life is better in family.",
-    areas: ["Counseling", "Coaching", "Training", "Leadership development"],
-  },
   values: {
     heading: "Values that guide my work",
     items: [
